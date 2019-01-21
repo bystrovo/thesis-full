@@ -1,0 +1,92 @@
+\documentclass[
+a4paper,
+pagesize,
+pdftex,
+12pt,
+twoside, % + BCOR darunter: für doppelseitigen Druck aktivieren, sonst beide deaktivieren
+BCOR=5mm, % Dicke der Bindung berücksichtigen (Copyshop fragen, wie viel das ist)
+ngerman,
+fleqn,
+final,
+]{scrartcl}
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc} % Eingabekodierung: UTF-8
+\usepackage{fixltx2e} % Schickere Ausgabe
+\usepackage[T1]{fontenc} % ordentliche Trennung
+\usepackage{lmodern} % ordentliche Schriften
+\usepackage[unicode=true]{hyperref}
+\usepackage{setspace,graphicx,tikz,tabularx} % für Elemente der Titelseite
+\usepackage[draft=false,babel,tracking=true,kerning=true,spacing=true]{microtype} % optischer Randausgleich etc.
+
+\usepackage[margin=1in]{geometry}          
+\usepackage{graphicx}
+\usepackage{amsthm, amsmath, amssymb}
+\usepackage{setspace}\onehalfspacing
+\usepackage[loose,nice]{units} %replace "nice" by "ugly" for units in upright fractions
+\usepackage{color}
+%\usepackage{hyperref}
+
+\usepackage{xcolor}
+\definecolor{ltgrey}{HTML}{F5F5F5}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=cyan,
+}
+
+\usepackage[inline]{enumitem}
+\usepackage{todonotes}
+
+\usepackage{refcheck} %show which refs are note used
+
+%\urlstyle{same}
+
+
+
+% Use “\cite{NEEDED}” to get Wikipedia-style “citation needed” in document
+%\usepackage{ifthen}
+%\let\oldcite=\cite
+%\renewcommand{\cite}[2]{\ifthenelse{\equal{#2}{NEEDED}}{\textcolor{red}{\ensuremath{^\texttt{[citation~needed]}}}}{\oldcite{#1}{#2}}}
+
+\newcommand{\citationneeded}{\textsuperscript{\color{red} [citation needed]}}
+ 
+ 
+% \title{E-learning performance optimization. Towards an emotionally-aware visual interface}
+% Viability of an emotionally-aware interface within e-learning to optimize performance
+% \author{Oleg Bystrov, Humboldt Universitaet zu Berlin}
+% \date{2018}
+
+
+ 
+\begin{document}
+
+\input{Institutsvorlage}
+	
+\titel{E-learning performance optimization - towards an emotionally-aware visual interface} % Titel der Arbeit
+\typ{Master Thesis} % Typ der Arbeit:  Diplomarbeit, Masterarbeit, Bachelorarbeit
+\grad{Master of Science (M. Sc.)} % erreichter Akademischer Grad
+% z.B.: Master of Science (M. Sc.), Master of Education (M. Ed.), Bachelor of Science (B. Sc.), Bachelor of Arts (B. A.), Diplominformatikerin
+\autor{Oleg Bystrov} % Autor der Arbeit, mit Vor- und Nachname
+\gebdatum{1.5.1991} % Geburtsdatum des Autors
+\gebort{Potsdam, Germany} % Geburtsort des Autors
+\gutachter{Prof. Dr. Niels Pinkwart}{Prof. Dr. Albrecht Schmidt} % Erst- und Zweitgutachter der Arbeit
+\mitverteidigung % entfernen, falls keine Verteidigung erfolgt
+\makeTitel
+
+\tableofcontents
+
+\input{content.tex}
+
+% Erzeugen der Selbständigkeitserklärung auf einem neuen Blatt:
+\selbstaendigkeitserklaerung{\today}
+
+\clearpage
+
+\nocite{*}
+
+\bibliographystyle{apalike}
+\bibliography{../Library/Masterarbeit}
+
+\end{document}
