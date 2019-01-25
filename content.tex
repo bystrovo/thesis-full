@@ -4,6 +4,10 @@
 
 [TODO: Intention, hypotheses and results of the study]
 
+
+
+Discussion centers on potential practical implications of the present results, as well as on prospects for future research.
+
 \clearpage
 
 \section{Background}
@@ -15,28 +19,47 @@
 	\input{motivation.tex}
 	
 		
-	\subsection{Research basis} 
+	\subsection{Research basis} \label{sec:research}
 	
-	\cite{McCrudden2017} describe from a standpoint of information architecture the effect of different types of visual display on cognitive processing. They highlight the important aspects of visual guidelines, the basics of human working and long-term memory and a way to quantify those under processing efficiency.
+	Information architecture and display types play an important role in learning comprehension, attention and learning success. \cite{McCrudden2017} describe the effects of different types of visual display on cognitive processing. They highlight the important aspects of visual guidelines, the basics of human understanding and  memory, as well a way to quantify those under processing efficiency. One of their conclusions is that "displays should be designed to support the selection of important information" \cite[p.633]{McCrudden2017}
 	
-	There is, however, a case to be made with respect to the same visual display presented to a participant under differentiating emotional conditions. There is strong evidence that emotions play a role in information processing and, as a consequence have an effect on the resulting performance
+	There is, however, a case to be made with respect to the same visual display that can be put forth in front of participants under differentiating emotional conditions. There is strong evidence that emotions play a role in information processing and, as a consequence, can have an effect on the resulting performance. Section \ref{sec:emotion-cognition} discusses closer existing research of a connection between emotion and cognition
+	
+	A recent study \cite{Haaranen2015} suggests that wrong choice of emotional design patterns can yield contra-productive results. It reports lover concentrations levels in the experiment group compared to control group using abstract graphics when learning object-oriented programming (OOP). Due to their choice of presentation and the topic or learning, the material has not been perceived as serious and a such became distracting.
+		
+		\subsubsection{Emotion theory}
+		
+		[TODO]: summarize Valence-Arousal model and explain 4 groups
+		
+		\subsubsection{Emotion and cognition} \label{sec:emotion-cognition}
+		
+		A 2004 cognitive neuroscience study \cite{Dolcos2004} scanned participants brain activity, while rating emotional pictures. The study suggests several relevant conclusions. First, that different parts of the brain show stronger activity when exposed to positive compared to negative stimuli. Second, that high arousal stimuli lead to greater successful encoding activity, or in other words - rate of recall, than neutral stimuli. 
+		
+		In other words, brain response is different for arousing stimuli of positive valence compared to negative valence. Furthermore memory is mediated, in part by both - valence and arousal levels. It provides basis to the assumption that variation on both dimensions is necessary to adequately reflect effects within e-learning context. Study design in \ref{sec:study-design} depends heavily on this assumption.
+		
+		\subsubsection{Emotion and visual interface}
+		
+		\cite{Desmet2007} demonstrates in their research that physical objects can cause significant emotional response and that modifying design attributes can successfully contribute to creating of desired response.
+		Both physical objects and digital visuals are, in essence, interfaces. Both can cause an emotional response \citationneeded Digital interfaces are extremely flexible to experimentation and modification at low cost.
 	
 	\subsection{Hypotheses}
 	
-	\paragraph{Hypothesis 1.} Two different interfaces can result in a significant difference in emotional response
-	\paragraph{Hypothesis 2.} Resulting performance (as measured by selected study design parameters) during the experiment is higher for saturated interface, compared to desaturated interface.
+		\paragraph{Hypothesis 1.} Two different interfaces can result in a significant difference in emotional response
+		\paragraph{Hypothesis 2.} Resulting performance (as measured by selected study design parameters) during the experiment is higher for saturated interface, compared to desaturated interface.
 
 \section{Approach and Methods}
 
-To facilitate the study I make assumptions about the medium in which e-learning is usually conducted. Based on the research basis I define study design parameters and a set of target variables that will be evaluated.
+To facilitate the study I make assumptions about the medium in which e-learning is usually conducted. Based on research basis (\ref{sec:research}) I define study design parameters and a set of target variables that are evaluated.
 
 	\subsection{Medium}
 	
 	The study is to be conducted online under a "real-life" scenario. This means, that the experiment is to be run in a browser-capable web-application runnable on modern personal computers. Like most e-learning software the  application used in the study is browser-based and usually used in users homes or public places.
 	
-	\subsection{Study design}
+	\subsection{Study design} \label{sec:study-design}
 	
-	The goal of the current study is to determine emotional response to provided emotional design implementation (Interface 1) compared to the control group that was provided with a stricter desaturated design (Interface 0). The differences include use of color, shapes, language, font style, responsiveness, animation. The similarities and, thus constant variables, across both interfaces include any accessibility features and general usability heuristics, such as contrast ratio level, size and placement of elements on a screen, 
+	Goal of the current study is to determine emotional response to provided emotional design implementation (Interface 1) compared to the control group that is provided with a stricter desaturated design (Interface 0). Differences include use of color, shapes, language, font style, interaction responsiveness, animation. The similarities or - constant variables - across both interfaces include any accessibility features and general usability heuristics, such as contrast ratio level, size and placement of elements on a screen.
+	
+	The experiment can be outlined and split into following steps:
 	
 	\begin{enumerate}
 		
@@ -48,18 +71,17 @@ To facilitate the study I make assumptions about the medium in which e-learning 
 			\textbf{3}: Positive valence / low arousal;
 			\textbf{4}: Negative valence / low arousal;
 			
-		Choice and showing of preconditioning is described further in in the following chapter \ref{preconditioning}
+		Choice of stimuli and their presentation is described further in chapter \ref{preconditioning}
 			
-		\item \textbf{Emotional validation:} A short emotional self-reporting questionnaire (SAM \ref{'sec:selfeval'}) is used to validate, whether preconditioning has had sufficient and expected effect on the participant.
+		\item \textbf{Emotional report:} A short emotional self-reporting questionnaire (SAM \ref{sec:selfeval}) is used to validate, whether preconditioning has had sufficient and expected effect on the participant.
 		
 		\item \textbf{Experiment 1:} Slightly modified classic memory game. The participant is presented with a grid of tiles, each tile containing an image. During 5 seconds at the beginning of the experiment all tiles are open to allow to memorize the images. After which all images are hidden. Only 2 tiles can be opened at any one time. Once 2 of the same tiles are open they are marked as solved. The goal is to solve all tiles.
 		
 		\item \textbf{Experiment 2:} Remote Associates Test (RAT). A generalized creativity test developed by Mednick \cite{Mednick1962} in 1962. Each participant is presented with a number of word sets. Each set consists of 3 words that are shown to the participant and one target word that is hidden from the them. The target word is semantically connected to all 3 visible words
 		
-		\item \textbf{Emotional validation:} A second emotional self-reporting questionnaire (SAM \ref{'sec:selfeval'}) to establish, whether and which effect tasks and interface have had on the participant's emotion.
+		\item \textbf{Emotional validation:} A second emotional self-reporting questionnaire (SAM \ref{sec:selfeval}) is used to establish, whether and which effect tasks and interface have had on the participant's emotion.
 		
-		\item \textbf{Demographic data:} Final step adds additional context data about the person for each participant through a questionnaire to complement data analysis.
-		
+		\item \textbf{Demographic data:} Final step adds additional personal context data for each participant through a questionnaire to complement data analysis (discussed in \ref{sec:demographics}).
 		
 	\end{enumerate}
 	
@@ -69,13 +91,13 @@ To facilitate the study I make assumptions about the medium in which e-learning 
 	
 	\subsection{Emotional Design Features}
 	
-	[TODO:] white about emotional design, rewrite citation blocks below
+	[TODO:] write about emotional design, rewrite citation blocks below
 	
-	% \input{1-developing-high-performing-interface.tex}
+	\input{1-developing-high-performing-interface.tex}
 	
 	\subsection{Experiments}
 
-		\subsubsection{Experiment 1: Short term Memory}
+		\subsubsection{Experiment 1: Short term Memory} \label{sec:memory}
 		
 		Memory Experiment 
 		
@@ -87,7 +109,7 @@ To facilitate the study I make assumptions about the medium in which e-learning 
 		
 		\paragraph{Performance parameters:} \label{sec:memory-parameters}
 		
-		\subsubsection{Experiment 2: Creative thought}
+		\subsubsection{Experiment 2: Creative thought} \label{sec:creativity}
 		
 		A generalized creativity test developed by Mednick \cite{Mednick1962} in 1962. It does not require prior knowledge of any particular subject. Some of 144 compound remote associate sets are taken from \cite{Bowden}. These are a subset of RAT problems and have been alternatively described as "compound word problems". Of the triad of words that are presented each can form a compound word or a two-word phrase with the solution word.
 		
@@ -96,14 +118,35 @@ To facilitate the study I make assumptions about the medium in which e-learning 
 		[TODO:] measuring performance of this experiment
 
 
-	\subsection{Means of emotional self-evaluation} \label{'sec:selfeval'}
+	\subsection{Means of emotional self-evaluation} \label{sec:selfeval}
 	
 	\input{means-of-self-evaluation.tex}
+	
+	[TODO:] Describe Valence and Arousal evaluation techniques
+	
+	SAM , AS, Affect Grid \cite{Russell1989}
+	
+	Due to effort constraints of the participants it is important to achieve a simple, yet accurate reading of their emotions. In the context of this study self-evaluation is a means to validate results, of Hypothesis 1. I chose to rely on the proven SAM (Self-Assessment Manikin) method \cite{Bradley1994} to quickly allow users to assess their emotions on a dual 9 element scale.
+	
+	\subsection{Demographic data} \label{sec:demographics}
+	
+	As final step of the study each participant fills out a demographics questionnaire to add context data and help with analysis. There are 4 questions:
+	
+	\begin{itemize}
+		\item Gender [Male / Female]
+		\item Age [18-24 / 25-29 / 30-34 / 35 - 44 / older]
+		\item Is English your native language? [yes / no]
+		\item Occupation: [High school student / Undergraduate Student / Graduate Student / Doctorate / Professional or Working
+	\end{itemize}
 
+	The age groups are taken in accordance with suggestions provided by the Standard International Age Classifications \cite{UN1982} with slight modifications to exclude ages below 18. Further the study would focus on ages up to 44. Ages above 44 could potentially skew results due factors not considered by present study. Primary focus audience lies between ages of 18 and 34.
+	
+	Last field allows the user to enter their email address for participation in the raffle and complies with the motivational promise at the start of the study.
 
 	\subsection{E-learning activity logging}
 	
-	\input{activity-logging.tex}
+	To assess performance of subjects continuous measurements are taken during the test. General approach is an event based system where each action from the user or the system is emitted to the database. I differentiate between a "click" action that is initiated by the user and an "event" action that is generated by the EVAluation system
+	%\input{activity-logging.tex}
 	
 	Describe general approach to recording actions and recording approach for this study.
 		
@@ -118,6 +161,9 @@ To facilitate the study I make assumptions about the medium in which e-learning 
 \section{Study implementation}
 
 \input{study-implementation.tex}
+
+\paragraph{Technological implementation} is guided by the requirement to run the study in a browser on a personal computer. React.js is selected as a library of choice due to it's favorable characteristics to creating an environment that supports 2 themes and global settings in a scalable way. Reacts unidirectional data flow
+allows clear behavior path between application data and visual representation. For example changing the theme in a global context propagates new style and visual rules applied throughout the application without losing current state.
 
 \section{Results and Evaluation}
 
