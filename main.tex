@@ -26,6 +26,7 @@ final,
 \usepackage{color}
 %\usepackage{hyperref}
 
+
 \usepackage{xcolor}
 \definecolor{ltgrey}{HTML}{F5F5F5}
 
@@ -43,7 +44,12 @@ final,
 \usepackage{refcheck} %show which refs are note used
 \usepackage{breakcites}
 
+\usepackage{minted}
+\usepackage{listings}
+
 %\urlstyle{same}
+
+\usepackage{pbox}
 
 
 
@@ -53,14 +59,13 @@ final,
 %\renewcommand{\cite}[2]{\ifthenelse{\equal{#2}{NEEDED}}{\textcolor{red}{\ensuremath{^\texttt{[citation~needed]}}}}{\oldcite{#1}{#2}}}
 
 \newcommand{\citationneeded}{\textsuperscript{\color{red} [citation needed]}}
+\newcommand{\toDo}[1]{\textcolor{red}{TODO: {#1}}}
  
  
 % \title{E-learning performance optimization. Towards an emotionally-aware visual interface}
 % Viability of an emotionally-aware interface within e-learning to optimize performance
 % \author{Oleg Bystrov, Humboldt Universitaet zu Berlin}
 % \date{2018}
-
-
  
 \begin{document}
 
@@ -77,18 +82,64 @@ final,
 \mitverteidigung % entfernen, falls keine Verteidigung erfolgt
 \makeTitel
 
+% -----------------------------
+% --- frontmatter: Contents ---
+% -----------------------------
 \tableofcontents
 
+% -------------------------------
+% --- main body of the thesis ---
+% -------------------------------
 \input{content.tex}
 
-% Erzeugen der Selbständigkeitserklärung auf einem neuen Blatt:
-\selbstaendigkeitserklaerung{\today}
+\clearpage
+
+% ----------------
+% --- appendix ---
+% ----------------
+
+\appendix
+
+% figures
+%\newpage
+%\input{app_figures}
+
+% tables
+\newpage
+\input{app_tables}
+
+% excerpts
+\newpage
+\input{app_excerpts}
 
 \clearpage
+
+
+% ---------------------------------------------------
+% --- frontmatter: List of Excerpts ---
+% ---------------------------------------------------
+\renewcommand\listoflistingscaption{List of Excerpts}
+\listoflistings
+% ---------------------------------------------------
+% --- frontmatter: List of Figures ---
+% ---------------------------------------------------
+\listoffigures
+% ---------------------------------------------------
+% --- frontmatter: List of Tables ---
+% ---------------------------------------------------
+\listoftables
+
+\clearpage
+
 
 \nocite{*}
 
 \bibliographystyle{apalike}
 \bibliography{../Library/Masterarbeit}
+
+% Erzeugen der Selbständigkeitserklärung auf einem neuen Blatt:
+\selbstaendigkeitserklaerung{\today}
+
+%\input{authorship.tex}
 
 \end{document}
