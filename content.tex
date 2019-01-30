@@ -4,6 +4,7 @@
 
 [TODO: Intention, hypotheses and results of the study]
 
+Ethical, legal and social considerations are also part of my thesis.
 
 
 Discussion centers on potential practical implications of the present results, as well as on prospects for future research.
@@ -14,12 +15,12 @@ Discussion centers on potential practical implications of the present results, a
 
 	\subsection{Motivation}
 	
-	[TODO]
-	
 	\input{motivation.tex}
 	
 		
 	\subsection{Research basis} \label{sec:research}
+	
+	\toDo{about 10 pages of research}
 	
 	Information architecture and display types play an important role in learning comprehension, attention and learning success. \cite{McCrudden2017} describe the effects of different types of visual display on cognitive processing. They highlight the important aspects of visual guidelines, the basics of human understanding and  memory, as well a way to quantify those under processing efficiency. One of their conclusions is that "displays should be designed to support the selection of important information" \cite[p.633]{McCrudden2017}
 	
@@ -29,7 +30,7 @@ Discussion centers on potential practical implications of the present results, a
 		
 		\subsubsection{Emotion theory}
 		
-		[TODO]: summarize Valence-Arousal model and explain 4 groups
+		\toDo{[TODO]: summarize Valence-Arousal model and explain 4 groups}
 		
 		\subsubsection{Emotion and cognition} \label{sec:emotion-cognition}
 		
@@ -44,8 +45,8 @@ Discussion centers on potential practical implications of the present results, a
 	
 	\subsection{Hypotheses}
 	
-		\paragraph{Hypothesis 1.} Two different interfaces can result in a significant difference in emotional response
-		\paragraph{Hypothesis 2.} Resulting performance (as measured by selected study design parameters) during the experiment is higher for saturated interface, compared to desaturated interface.
+		\paragraph{Hypothesis 1.} Two different interfaces do not result in a significant difference in emotional response
+		\paragraph{Hypothesis 2.} Performance or participants on tasks, as measured by selected study design parameters, during the experiment is equal with interface 1, and with interface 0.
 
 \section{Approach and Methods}
 
@@ -59,13 +60,15 @@ To facilitate the study I make assumptions about the medium in which e-learning 
 	
 	Goal of the current study is to determine emotional response difference to provided emotional design implementation (Interface 1) compared to the control group that is provided with a stricter desaturated design (Interface 0). Differences include use of color, shapes, language, font style, interaction responsiveness, animation. The similarities or - constant variables - across both interfaces include any accessibility features and general usability heuristics, such as contrast ratio level, size and placement of elements on a screen.
 	
-	Participants of the study are not informed about the existence of another interface as a variable but rather only informed about being emotionally influenced by preconditioning and that their performance during the experiment is being measured.
+	Participants of the study are not informed about the existence of another interface as a variable but rather only made aware about being emotionally influenced by preconditioning and that their performance during the experiment is being measured. Abundance of timers throughout the test highlight the time sensitivity of the tasks to the participant.
 	
 	The experiment can be outlined and split into following steps:
 	
 	\begin{enumerate}
 		
 		\item[0.] \textbf{Clustering:} Each participant is assigned an interface version (1 of 2) and the preconditioning group (1 of 4) at random before first load of the application.
+		
+		\item \textbf{Emotional report:} A short emotional self-reporting questionnaire (SAM \ref{sec:selfeval}) is used to acquire initial valence and arousal ratings
 		
 		\item \textbf{Preconditioning:} Each participant is shown a set of emotional images and preconditioned to be in one of 4 states:
 			\textbf{1}: Positive valence / high arousal;
@@ -75,7 +78,7 @@ To facilitate the study I make assumptions about the medium in which e-learning 
 			
 		Choice of stimuli and their presentation is described further in chapter \ref{preconditioning}
 			
-		\item \textbf{Emotional report:} A short emotional self-reporting questionnaire (SAM \ref{sec:selfeval}) is used to validate, whether preconditioning has had sufficient and expected effect on the participant.
+		\item \textbf{Emotional report:} Emotional self-reporting questionnaire (SAM \ref{sec:selfeval}) to validate, whether preconditioning has had a sufficient and expected effect on the participant.
 		
 		\item \textbf{Experiment 1:} Slightly modified classic memory game. The participant is presented with a grid of tiles, each tile containing an image. During 10 seconds at the beginning of the experiment all tiles are open to allow to memorize the images. After which all images are hidden. Only 2 tiles can be opened at any one time. Once both tiles of the same image are open they are marked as solved. The goal is to solve all tiles. \ref{sec:memory}
 		
@@ -91,9 +94,11 @@ To facilitate the study I make assumptions about the medium in which e-learning 
 	
 	\input{2-choosing-a-preconditionining-sequence.tex}
 	
-ac	\subsection{Emotional Design Features}
+	\subsection{Emotional Design Features}
+
+Under real conditions it can be expected that the e-learning interface will cause mild-to-moderate changes to a mood.
 	
-	[TODO:] write about emotional design, rewrite citation blocks below
+	\toDo{write about emotional design, rewrite citation blocks below}
 	
 	\input{1-developing-high-performing-interface.tex}
 	
@@ -121,33 +126,74 @@ ac	\subsection{Emotional Design Features}
 		 
 		
 		
-\begin{figure}[h]
-	\centering
-	\includegraphics[height=0.3\textheight]{graphics/Example_RAT_Set}
-	\caption{Example RAT word-set "LINE, SURPRISE, BIRTHDAY"}
-	\label{fig:exampleratset}
-\end{figure}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[height=0.3\textheight]{graphics/Example_RAT_Set}
+			\caption{Example remote associate word-set "Cottage, Swiss, Cake"}
+			\label{fig:exampleratset}
+		\end{figure}
 
 
-In a 2003 paper Bowden et al. \cite{Bowden} have developed 144 sets of RAT problems with an additional constraint. The solution word has to not only be related to the triad of stimulus words but additionally each can form a commonly used compound word or two-word phrase with the solution word.
-Bowden's word-sets are a subset of all possible RAT problems and have been alternatively described as "compound word problems".
-\toDo{longer description of what Bowden proposes with some quotes}
+		In a 2003 paper Bowden et al. \cite{Bowden} have developed 144 sets of RAT problems with an additional constraint. The solution word has to not only be related to the triad of stimulus words but additionally each of them should form a commonly used compound word or two-word phrase with the solution word.
+		Bowden's word-sets are a subset of all possible remote associate problems and have been alternatively described as "compound word problems".
 		
-		Some \textbf{20} of a set of 144 compound remote associate sets are taken from \cite{Bowden}. Some of the easier word-sets are selected for present experiment while avoiding certain colloquialisms related to a location. As a result, these 20 word-sets should be challenging although solvable to a wide array of people from different backgrounds. Table \ref{table:1} presents a list of the used RAT problems in the test.
+		\toDo{longer description of what Bowden proposes with some quotes}
 		
+		Some \textbf{20} of a set of 144 compound remote associate sets are taken from \cite{Bowden}. Some of the easier (top solving percentage rate among 30-second threshold test participants, published by Bowden) word-sets are selected for present experiment while avoiding certain colloquialisms related to a location. As a result, these 20 word-sets should be challenging although solvable to a wide array of people from different backgrounds. Table \ref{table:1} presents a list of the used RAT items in the current study. The difference in time taken to solve a problem act as indicator for performance. (\ref{sec:creativity-parameters}).
 		
 		\paragraph{Experiment details}
 		
-\toDo{Explain implementing considerations here}
+		The participant is informed about the rules and what is expected from them:
+		
+		\begin{displayquote}
+			"You will see three stimulus words. Attempt to generate a fourth word that is related to each stimulus word. When combined with each of the stimulus words will build a word pair that is a common compound word or phrase. The goal is to find a solution as fast a possible
+			
+			After 30 seconds you will see 2 words appearing as hints on the screen, only one solution is correct.
+			The first 3 are practice sets and will allow you to train. During practice we will give you a hint after 10 seconds"
+		\end{displayquote}
+	
+		The participant is shown 3 practice tasks which allow them to get used to the interface and the dynamics of the task. As most of the participants are remote and unsupervised it is important to give an intuitive set of instructions and avoid any variation due to unclear interface or task.
+		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.7\linewidth]{"graphics/creativity versions"}
+			\caption{Example screen showing both versions of interface during creativity experiment}
+			\label{fig:creativity-versions}
+		\end{figure}
+	
+		After 3 practice tasks, participant clicks on "Start Experiment" before solving 20 items defined in the set. An example preview of both interface screens with the three stimulus words and an input for the answer is displayed in figure \ref{fig:creativity-versions} 
+		
+		Upon appearance of each word-set a timer starts tracking the time to enter a word.
+		Stimulus words appear with a 200ms delay from timer start and 50ms delay between each word appearing. The appearance animation takes 300ms. All items are completely visible at 600ms mark, with the first word in the left-to-right direction completely visible and static at 500ms after timer start. 500ms can be discounted from the time it takes to solve a problem (Effectively participants have 29.5 seconds to solve a problem).
+		
+		\paragraph{Appearance of Hints}
+		
+		Each word-set has a 30 second limit to solve a problem. After time is expired a block with 2 hint words \ref{fig:hint-buttons} appear. One of which is the correct solution to the problem, another is a false solution. It is semantically clear which solution is correct, upon reading it the participant is expected to experience the "aha!" effect mentioned in \cite[p.634]{Bowden} with a reference to previous research. Choosing the wrong answer, once the time expires can be a hint that the participant is not paying attention.
+		
+		After hints appear, the problem is not any more counted as solved by the participant. 
+		
+		\textit{Hints appearance can be delayed.} Due to a person requiring typing the answer on a keyboard it is assumed the answer is known once the first letter of the word is written in the field. There is a 3000ms grace delay to type each additional character. Grace delay accounts for typing speed and is deemed sufficient for most persons. Erasing a character is considered as typing (and resets the counter) unless the first letter of the input is erased. Once the delay is passed or the first letter erased the hints appear and the problem is marked as unsolved. Time of the first letter being typed is considered an objective point of time that a participant figures out the answer to the problem. The time of first letter is always within 30 seconds of appearance of the word-set.
+		
+		\begin{figure}
+			\centering
+			\includegraphics[width=0.3\linewidth]{"graphics/Hint buttons"}
+			\caption{Hints after time allowed for solving a problem is elapsed}
+			\label{fig:hint-buttons}
+		\end{figure}
+		
+		
+		Once all items are solved they are directed to the next page of the interface.
 				
 		\paragraph{Activity logging} \textit{Experiment 2} activity is specified based upon generalized logging of activity in e-learning described in \ref{sec:activitylog}
 		
-		The test is connected with a generic action emitter and is triggered in the following cases:
+		The test is connected with a generic action emitter. An action triggered in the following cases:
 		
 		\begin{itemize}
-			\item Click on button to start experiment
-			\item Click on 
+			\item Click on button to start practice
+			\item Click on button to start live experiment
 		\end{itemize}
+	
+			\toDo{Explain more activity logging}
 
 		\paragraph{Performance variables} \label{sec:creativity-parameters}
 		
@@ -172,37 +218,41 @@ Bowden's word-sets are a subset of all possible RAT problems and have been alter
 	
 	Due to effort constraints of the participants it is important to achieve a simple, yet accurate reading of their emotions. In the context of this study self-evaluation is a means to validate results, of Hypothesis 1. I chose to rely on the proven SAM (Self-Assessment Manikin) method \cite{Bradley1994} to quickly allow users to assess their emotions on a dual 9 element scale.
 	
-	\subsection{Demographic data} \label{sec:demographics}
+	\subsection{Demographic data and supplemental information} \label{sec:demographics}
 	
 	As final step of the study each participant fills out a demographics questionnaire to add context data and help with analysis. There are 4 questions:
 	
-	\begin{itemize}
-		\item Gender [Male / Female]
-		\item Age [18-24 / 25-29 / 30-34 / 35 - 44 / older]
-		\item Is English your native language? [yes / no]
-		\item Occupation: [High school student / Undergraduate Student / Graduate Student / Doctorate / Professional or Working
-	\end{itemize}
+	\begin{enumerate}
+		\item Gender \\ \ [Male / Female]
+		\item Age \\ \ [18-24 / 25-29 / 30-34 / 35 - 44 / older]
+		\item Is English your native language? \\ \ [yes / no]
+		\item What is your level of English knowledge? \\ \
+			[Beginner  / Intermediate / Advanced / Fluent]
+		\item Occupation: \\ \ [High school student / Undergraduate Student / Graduate Student / Doctorate / Professional or Working]
+	\end{enumerate}
 
 	The age groups are taken in accordance with suggestions provided by the Standard International Age Classifications \cite{UN1982} with slight modifications to exclude ages below 18. Further the study would focus on ages up to 44. Ages above 44 could potentially skew results due factors not considered by present study. Primary focus audience lies between ages of 18 and 34.
+	
+	Question 4 is used to validate the requirement of at least an "advanced" proficiency in English. Participant choosing anything lower could suggest either invalid data or problems with the creativity task due to language issues. In this case participant will be considered for removal. \todo{evaluate this claim}
 	
 	Last field allows the user to enter their email address for participation in the raffle and complies with the motivational promise at the beginning of the experiment.
 
 	\subsection{E-learning activity logging} \label{sec:activitylog}
 	%\input{activity-logging.tex}
 	
-	[TODO:] Describe general approach to recording actions and recording approach for this study.
+	\toDo{[TODO:] Describe general approach to recording actions and recording approach for this study.}
 	
 	Each participant is defined as a \textit{user}. Each user is assigned a session for each new started experiment. 
 	
 	To assess the performance of participants continuous measurements are taken during a session of the experiment. A general approach is an event-based system where each \textbf{action} from the \textit{user} or the \textit{system} is emitted to the database. A differentiation is established between a "click" action that is initiated by the user and an "event" action that is initiated by the system environment.
 	
 	For correct attribution at the moment when action is emitted it contains: 
-	\begin{enumerate}
+	\begin{itemize}
 		\item userID, sessionID, timestamp (unique key)
 		\item name of active screen
 		\item type of action (\textit{event} or \textit{click})
 		\item context information such as global system state and dependent values of current active screen
-	\end{enumerate}
+	\end{itemize}
 
 	Finally, for system actions (events) \textbf{name of event} is provided. For user actions (clicks) a target of the click is provided.
 	
@@ -218,16 +268,16 @@ Bowden's word-sets are a subset of all possible RAT problems and have been alter
 		
 		"[location]\_[action]\_[result]"
 		
-		[TODO:] describe how I implemented tracking, storage and analysis for current study
+		\toDo{[TODO:] describe how tracking is implemented, storage and analysis for current study}
 		
 		Action tracking is managed by a dedicated module that communicates with the database storage API. Each event sent to the Database is complemented with a timestamp and user data. An action object with usual fields is described in listing \ref{lst:db_object}
 
 
 	\begin{listing}[H]
 		\begin{minted}{json}
-{
-"first": "second1"
-}
+			{
+			"first": "second1"
+			}
 		\end{minted}
 		\caption{Database Object Fields}
 		\label{lst:db_object}
@@ -237,20 +287,40 @@ Bowden's word-sets are a subset of all possible RAT problems and have been alter
 		
 		\paragraph{xAPI adaptation} - 
 		
-		[TODO:] explore adaptability and possible constraints
+		\toDo{[TODO Optional:] explore adaptability and possible constraints}
 
 \section{Study implementation}
 
 \input{study-implementation.tex}
 
-\paragraph{Technical implementation} is guided by the requirement to run the study in a browser on a personal computer. React.js is selected as a library of choice due to it's favorable characteristics to creating an environment that supports 2 themes and global settings in a scalable way. Reacts unidirectional data flow
-allows clear behavior path between application data and visual representation. For example changing the theme in a global context propagates new style and visual rules applied throughout the application without losing current state.
+\paragraph{Technical implementation} is guided by the requirement to run the study in a browser on a personal computer. React.js is selected as a library of choice due to it's favorable characteristics to creating an environment that supports 2 themes and global settings in a scalable way. 
+
+
+React's unidirectional data flow allows clear behavior path between application data and visual representation. In particular, it becomes possible to adjust the theme of the interface and propagate in-place an alternative style and visual rules throughout the application without losing current state. Additional benefits of this approach are discussed in section \ref{sec:further-research} in the context of an emotionally aware interface.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1\linewidth]{"graphics/App Architecture"}
+	\caption{Component based architecture with emotion control mechanism}
+	\label{fig:app-architecture}
+\end{figure}
+
+Current implementation contains a minimal proof of concept of a way to enable e-learning interfaces to be complemented with emotional data. On one side data about the nature of the task, as discussed by \cite{Haaranen2015} and acknowledged in section \ref{sec:research}. On the other side about the emotional state of the user, either through ambient and body-sensors, or by other means.
+
+Through this architecture (as shown in figure \ref{fig:app-architecture}), it is possible to develop an interface that responds to emotional and task contexts with an appropriate interface.
 
 \section{Results and Evaluation}
 
-[TODO:] Here describe how evaluation was done, how many people participated, demographics data.
-
-[TODO:] Show general statistical data
+	\subsection{Collected data}
+	
+	[TODO:] Describe data preparation, how many people participated, demographics data, distributions.
+	[TODO:] Show general statistical data
+	
+	\subsection{Evaluation}
+	
+	[TODO:] Here describe how evaluation was done
+	
+\section{Conclusions}
 
 	\subsection{Hypothesis 1}
 	
@@ -260,7 +330,7 @@ allows clear behavior path between application data and visual representation. F
 	
 	[Note:] H2 should be checked for each task separately
 
-\section{Further research and implications of the study}
+\section{Further research and implications of the study} \label{sec:further-research}
 
 \subsection{Ethical, legal and social implications}
 
