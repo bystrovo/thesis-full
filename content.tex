@@ -1,5 +1,3 @@
-\clearpage
-
 \section{Introduction}
 
 [TODO: Intention, hypotheses and results of the study]
@@ -24,29 +22,72 @@ Discussion centers on potential practical implications of the present results, a
 	
 	Information architecture and display types play an important role in learning comprehension, attention and learning success. \cite{McCrudden2017} describe the effects of different types of visual display on cognitive processing. They highlight the important aspects of visual guidelines, the basics of human understanding and  memory, as well a way to quantify those under processing efficiency. One of their conclusions is that "displays should be designed to support the selection of important information" \cite[p.633]{McCrudden2017}
 	
-	There is, however, a case to be made with respect to the same visual display that can be put forth in front of participants under differentiating emotional states. There is strong evidence that emotions play a role in information processing and, as a consequence, can have an effect on the resulting performance. Section \ref{sec:emotion-cognition} discusses closer existing research supporting a connection between emotion and cognition
+	There is, however, a case to be made with respect to the same visual display that can be put forth in front of participants under differentiating emotional states. There is strong evidence that emotions play a role in information processing and, as a consequence, can have an effect on the resulting performance. Section \ref{sec:emotion-cognition} discusses closer existing research supporting a connection between emotion and cognition.
+	
+	Evidence also suggests that specific emotion can be caused through the use of emotional design features. Section \ref{sec:emotional-design-features} proposes a set of general rules for emotional design based on previous research.
 	
 	A recent study \cite{Haaranen2015} suggests that wrong choice of emotional design patterns can yield contra-productive results. It reports lover concentrations levels in the experiment group compared to control group using abstract graphics when learning object-oriented programming (OOP). Due to their choice of presentation and the topic or learning, the material has not been perceived as serious and a such became distracting.
 		
-		\subsubsection{Emotion theory}
+		\subsubsection{Emotion theory} \label{sec:emotion-theory}
+		
+		To understand how emotion acts as a mediator to e-learning and learning in general it is important to see what emotion is and what causes it.
+		
+		From a biological perspective \textbf{emotion} is a collection of responses triggered from parts of the brain to the body or other parts of the brain. A series of such responses results in an \textit{emotional state} and is defined by changes within the body. \cite{Damasio1998}
+	
+		Emotion is caused by various internal and external events. Internal events can be immune activity or hormone changes. External events - observed or felt in the outside world - contribute additionally to internal ones. People have do direct access to the causal connections of emotions and little to no control of them. One can undergo a change of emotion without knowing why. \cite{Russell2003}
+		
+		Russell proposes that at the base of any emotion the experienced states are either good or bad, energized or enervated. As such these are the two "core affects" that govern our perception, behavior and cognition. \cite{Russell2003}. 
+		
+		There are individual differences of average levels of core affect and its responsiveness to stimuli due to the genetic differences. \cite{Russell2003}
+		
+		Over the years of psychological research, models of emotion have taken a range of representations. 
+		A popular approach is the "Circumplex Model of Affect" \cite{Russell1980}, where emotions can be summarized and laid out in a two-dimensional space. The horizontal axis describing the "pleasure" (futher used as valence) dimension. The vertical axis - the arousal dimension.
+		
+		Assumptions in this paper are largely based upon the "Circumplex Model". I classify possible emotional states into four quadrants which are mutually discrete. To simplify, they are be labeled for further reference as shown in figure \ref{fig:valence_arousal_model}):
+		\begin{enumerate}
+			\item[Q1:] Angry (Quadrant 1)
+			\item[Q2:] Happy (Quadrant 2)
+			\item[Q3:] Sad (Quadrant 3)
+			\item[Q4:] Relaxed (Quadrant 4)
+		\end{enumerate}
+		
+		
+		\begin{figure}
+			\begin{center}
+				\includegraphics[width=150px]{graphics/Valence-Arousal-model-showing-the-quadrants-of-the-four-emotion-tags-used-in-this_W640.jpg}
+				\caption{Valence Arousal Model \cite{Song2013} \label{fig:valence_arousal_model}}
+				
+			\end{center}
+		\end{figure}
+		
 		
 		\toDo{[TODO]: summarize Valence-Arousal model and explain 4 groups}
 		
 		\subsubsection{Emotion and cognition} \label{sec:emotion-cognition}
 		
-		A 2004 cognitive neuroscience study \cite{Dolcos2004} scanned participants brain activity, while rating emotional pictures. The study suggests several relevant conclusions. First, that different parts of the brain show stronger activity when exposed to positive compared to negative stimuli. Second, that high arousal stimuli lead to greater successful encoding activity, or in other words - rate of recall, than neutral stimuli. 
+		A 2004 cognitive neuroscience study \cite{Dolcos2004} scanned participants brain activity, while rating emotional pictures. The study makes several relevant conclusions. First, that different parts of the brain show stronger activity when exposed to positive compared to negative stimuli. Second, that high arousal stimuli lead to greater successful encoding activity, or in other words - rate of recall, than neutral stimuli. 
 		
 		In other words, brain response is different for arousing stimuli of positive valence compared to negative valence. Furthermore memory is mediated, in part by both - valence and arousal levels. It provides basis to the assumption that variation on both dimensions is necessary to adequately reflect effects within e-learning context. Study design in \ref{sec:study-design} depends heavily on this assumption.
+		
+		
 		
 		\subsubsection{Emotion and visual interface}
 		
 		\cite{Desmet2007} demonstrates in their research that physical objects can cause significant emotional response and that modifying design attributes can successfully contribute to creating of desired response.
 		Both physical objects and digital visuals are, in essence, interfaces. Both can cause an emotional response \citationneeded Digital interfaces are extremely flexible to experimentation and modification at low cost.
+		
+		
+		Good sources:
+		\cite{Valdez1994} - effects of color on emotions
+		\cite{Plass2014} - Emotional design in multimedia learning: Effects of shape and color on affect and learning
+		\cite{Swasty2017} - Does Color Matter on Web User Interface Design?
+		\cite{Pert1996} - Color Research and Its Application to the Design of Instructional Materials
+		\cite{Tekirdag2015} - The Effect of Colour on Human Body and Psychology
 	
 	\subsection{Hypotheses}
 	
 		\paragraph{Hypothesis 1.} Two different interfaces do not result in a significant difference in emotional response
-		\paragraph{Hypothesis 2.} Performance or participants on tasks, as measured by selected study design parameters, during the experiment is equal with interface 1, and with interface 0.
+		\paragraph{Hypothesis 2.} Performance of participants on memory and creativity tasks, as measured by selected study design parameters, during the experiment is equal with interface 1, and with interface 0.
 
 \section{Approach and Methods}
 
@@ -58,7 +99,7 @@ To facilitate the study I make assumptions about the medium in which e-learning 
 	
 	\subsection{Study design} \label{sec:study-design}
 	
-	Goal of the current study is to determine emotional response difference to provided emotional design implementation (Interface 1) compared to the control group that is provided with a stricter desaturated design (Interface 0). Differences include use of color, shapes, language, font style, interaction responsiveness, animation. The similarities or - constant variables - across both interfaces include any accessibility features and general usability heuristics, such as contrast ratio level, size and placement of elements on a screen.
+	Goal of the current study is to determine emotional response difference to provided emotional design implementation (Interface 1) compared to the control group that is provided with a stricter desaturated design (Interface 0). Differences include use of color, shapes, language, font style, interaction responsiveness, animation. The similarities or - constant variables - across both interfaces include any accessibility features and general usability heuristics, such as contrast ratio level, size and placement of elements on a screen. Further details of the emotional design aspects, that are included in the current implementation are shown in section \ref{sec:emotional-design-features}
 	
 	Participants of the study are not informed about the existence of another interface as a variable but rather only made aware about being emotionally influenced by preconditioning and that their performance during the experiment is being measured. Abundance of timers throughout the test highlight the time sensitivity of the tasks to the participant.
 	
@@ -76,13 +117,13 @@ To facilitate the study I make assumptions about the medium in which e-learning 
 			\textbf{3}: Positive valence / low arousal;
 			\textbf{4}: Negative valence / low arousal;
 			
-		Choice of stimuli and their presentation is described further in chapter \ref{preconditioning}
+		Choice of stimuli and their presentation is described further in chapter \ref{sec:preconditioning}
 			
 		\item \textbf{Emotional report:} Emotional self-reporting questionnaire (SAM \ref{sec:selfeval}) to validate, whether preconditioning has had a sufficient and expected effect on the participant.
 		
-		\item \textbf{Experiment 1:} Slightly modified classic memory game. The participant is presented with a grid of tiles, each tile containing an image. During 10 seconds at the beginning of the experiment all tiles are open to allow to memorize the images. After which all images are hidden. Only 2 tiles can be opened at any one time. Once both tiles of the same image are open they are marked as solved. The goal is to solve all tiles. \ref{sec:memory}
+		\item \textbf{Experiment 1:} Slightly modified classic memory game. The participant is presented with a grid of tiles, each tile containing an image. During 10 seconds at the beginning of the experiment all tiles are open to allow to memorize the images. After which all images are hidden. Only 2 tiles can be opened at any one time. Once both tiles of the same image are open they are marked as solved. The goal is to solve all tiles. Detailed description in section \ref{sec:memory}
 		
-		\item \textbf{Experiment 2:} Remote Associates Test (RAT). A generalized creativity test developed by Mednick \cite{Mednick1962} in 1962. Each participant is presented with a number of word sets. Each set consists of 3 words that are shown to the participant and one target word that is hidden from the them. The target word is semantically connected to all 3 visible words \ref{sec:creativity}
+		\item \textbf{Experiment 2:} Remote Associates Test (RAT). A generalized creativity test developed by Mednick \cite{Mednick1962} in 1962. Each participant is presented with a number of word sets. Each set consists of 3 words that are shown to the participant and one target word that is hidden from the them. The target word is semantically connected to all 3 visible words. Detailed description in section \ref{sec:creativity}
 		
 		\item \textbf{Emotional report:} A second emotional self-reporting questionnaire (SAM \ref{sec:selfeval}) is used to establish, whether and which effect tasks and interface have had on the participant's emotion.
 		
@@ -90,15 +131,25 @@ To facilitate the study I make assumptions about the medium in which e-learning 
 		
 	\end{enumerate}
 	
-	\subsection{Preconditioning sequences} \label{preconditioning}
+	\subsection{Preconditioning sequences} \label{sec:preconditioning}
 	
 	\input{2-choosing-a-preconditionining-sequence.tex}
 	
-	\subsection{Emotional Design Features}
+	\subsection{Emotional Design Features} \label{sec:emotional-design-features}
 
 Under real conditions it can be expected that the e-learning interface will cause mild-to-moderate changes to a mood.
 	
 	\toDo{write about emotional design, rewrite citation blocks below}
+	
+	\cite{Arockiam2013}: Personality traits play a role in connection with User Interface Design for performance
+	
+	\cite{Brom2018}: Anthropomorphisms/colors consistently increased learning outcomes.
+	
+	\cite{Le2018}: Compared to the participants in the neutral design group, the participants in the positive emotional design group performed better on a subsequent retention test
+	
+	\cite{Mayer2014} For the enhanced group, the graphics were redrawn to render the host cell as a red face with expressive eyes (registering surprise, fear, and sickness at various stages in the process), and the virus as a blue face with fierce eyes and with a green dot at the end of each of the blue tentacles surrounding the virus face. The enhanced group performed better than the control group on a subsequent learning test
+	
+	Studies shown in section \ref{sec:research} strongly suggest a connection between user interface and learning performance. They analyze performance and presentation based on concrete content examples. In present study I attempt to generalize the findings to a more universal set of guidelines that is not specific to certain content and can be applied to any e-learning topic.
 	
 	\input{1-developing-high-performing-interface.tex}
 	
@@ -114,17 +165,18 @@ Under real conditions it can be expected that the e-learning interface will caus
 		
 		\paragraph{Performance variables:} \label{sec:memory-parameters}
 		
-				[TODO:] measuring performance of this experiment
+		[TODO:] measuring performance of this experiment
 		
 		\subsubsection{Experiment 2: Creative thought} \label{sec:creativity}
 		
-		A generalized creativity test developed by Mednick \cite{Mednick1962} in 1962. The test is developed in such a way that does not require prior knowledge of any particular subject. 
+		A generalized creativity test developed by Mednick \cite{Mednick1962} in 1962 requires the participant to perform creatively. They are "asked to form associative elements into new combinations by providing mediating connective links" \cite[p. 226]{Mednick1962}. This test is called Remote Associates Test or RAT.
+		It is developed in such a way that completing it does not require prior knowledge of any particular subject. 
 		
-		A possible limitation is knowledge of language and cultural influence. Mednick himself states that "verbal associative habits could reasonably be assumed to be familiar to almost all individuals that have been brought up in this (USA) culture". The originally presented 30-element list of problems can have a certain dependency on the cultural linguistic habits. Additional steps are taken to exclude possible problems due to these effects. \
+		Participants are shown a set of three stimulus words from mutually remote associative clusters. Their task is to provide the mediating link between them. The link must be of an associative manner, rather than one that applies additional logic or inferences. Figure \ref{fig:exampleratset} shows an example of such word-set with a solution.
 		
-		To minimize the limitation of language knowledge participant is required at the beginning of the study to comply with conditions, which contain (among others) "advanced English knowledge" (Appendix \ref{itm:participation_requirements}), the participants are later asked to state whether they are native English speakers.
-		 
+		A possible limitation is knowledge of language and cultural influence. Mednick himself states that RAT problems rely on "verbal associative habits could reasonably be assumed to be familiar to almost all individuals that have been brought up in this (USA) culture". The originally presented 30-element list of problems can have a certain degree of dependency on the cultural linguistic habits. For present study additional steps are taken to exclude possible problems due to these effects. 
 		
+		To minimize the limitation of language knowledge participant is required at the beginning of the study to comply with conditions, which contain (among others) "advanced English knowledge" (Appendix \ref{itm:participation_requirements}). After the tests the participants are asked to state whether or not they are native English speakers and to confirm their English knowledge level.
 		
 		\begin{figure}[h]
 			\centering
@@ -133,8 +185,8 @@ Under real conditions it can be expected that the e-learning interface will caus
 			\label{fig:exampleratset}
 		\end{figure}
 
-
-		In a 2003 paper Bowden et al. \cite{Bowden} have developed 144 sets of RAT problems with an additional constraint. The solution word has to not only be related to the triad of stimulus words but additionally each of them should form a commonly used compound word or two-word phrase with the solution word.
+		The current experiment uses a further development of the original Mednick's remote associate test presented by Bowden in a 2003 paper. Bowden et al. \cite{Bowden} have developed 144 sets of remote associate problems with an additional constraint. The solution word has to not only be related to the triad of stimulus words but additionally each of them should form a commonly used compound word or two-word phrase with the solution word. The solution word can build either the first part or the second part of the phrase.
+		
 		Bowden's word-sets are a subset of all possible remote associate problems and have been alternatively described as "compound word problems".
 		
 		\toDo{longer description of what Bowden proposes with some quotes}
@@ -172,7 +224,7 @@ Under real conditions it can be expected that the e-learning interface will caus
 		
 		After hints appear, the problem is not any more counted as solved by the participant. 
 		
-		\textit{Hints appearance can be delayed.} Due to a person requiring typing the answer on a keyboard it is assumed the answer is known once the first letter of the word is written in the field. There is a 3000ms grace delay to type each additional character. Grace delay accounts for typing speed and is deemed sufficient for most persons. Erasing a character is considered as typing (and resets the counter) unless the first letter of the input is erased. Once the delay is passed or the first letter erased the hints appear and the problem is marked as unsolved. Time of the first letter being typed is considered an objective point of time that a participant figures out the answer to the problem. The time of first letter is always within 30 seconds of appearance of the word-set.
+		\textit{Hints appearance can be delayed.} Due to a person requiring time to type the answer on a keyboard it is assumed the answer is known once the first letter of the word is written in the field. There is a 3000ms grace delay to type each additional character. Grace delay accounts for typing speed and is deemed sufficient for most persons. Erasing a character is considered as typing (and resets the counter) unless the first letter of the input is erased. Once the delay is passed or the first letter erased the hints appear and the problem is marked as unsolved. Time of the first letter being typed is considered an objective point of time that a participant figures out the answer to the problem. The time of first letter is always within 30 seconds of appearance of the word-set.
 		
 		\begin{figure}
 			\centering
@@ -186,26 +238,30 @@ Under real conditions it can be expected that the e-learning interface will caus
 				
 		\paragraph{Activity logging} \textit{Experiment 2} activity is specified based upon generalized logging of activity in e-learning described in \ref{sec:activitylog}
 		
-		The test is connected with a generic action emitter. An action triggered in the following cases:
+		A generic action emitter triggers an action when either of the following happens:
 		
 		\begin{itemize}
 			\item Click on button to start practice
 			\item Click on button to start live experiment
+			\item Event when word set appears on screen
+			\item Event when word set is guessed correctly
+			\item Event when word set is guessed incorrectly
+			\item Event when word set has expired (hint words appear)
 		\end{itemize}
 	
-			\toDo{Explain more activity logging}
+		Each event object contains system status information and context information about current words visible.
 
 		\paragraph{Performance variables} \label{sec:creativity-parameters}
 		
 		\begin{enumerate}
 			\item Aggregated solving speed: seconds taken to solve a problem on average
 			\item Non-aggregated solving speed: seconds taken to solve each problem
-			\item Idea generation ratio: how many attempts (including false ones) are taken withing the time limit on average
+			\item Idea generation ratio: how many attempts (including false ones) are taken within the time limit on average
 			\item Success rate: Number of problems solved successfully
-			\item Frustration/Attention: Amount of false choices after \textit{Hint Word} suggestion appears as ratio to Hint Word suggestion answers.
+			\item Frustration/Negative-attention: Amount of false choices after \textit{Hint Word} suggestion appears as ratio to Hint Word suggestion answers.
 		\end{enumerate}
 	
-		[TODO:] elaborate about the measures and reasoning behind them
+		\toDo{elaborate about the measures and reasoning behind them}
 
 
 	\subsection{Means of emotional self-evaluation} \label{sec:selfeval}
@@ -214,9 +270,9 @@ Under real conditions it can be expected that the e-learning interface will caus
 	
 	[TODO:] Describe Valence and Arousal evaluation techniques
 	
-	SAM , AS, Affect Grid \cite{Russell1989}
+	SAM , AS, Affect Grid \cite{Russell1989} (the same guy who created the circumplex model 9 years prior)
 	
-	Due to effort constraints of the participants it is important to achieve a simple, yet accurate reading of their emotions. In the context of this study self-evaluation is a means to validate results, of Hypothesis 1. I chose to rely on the proven SAM (Self-Assessment Manikin) method \cite{Bradley1994} to quickly allow users to assess their emotions on a dual 9 element scale.
+	Due to effort constraints of the participants it is important to achieve a simple, yet accurate reading of their emotions. In the context of this study self-evaluation is a means to validate results, of Hypothesis 1. I chose to rely on the proven SAM (Self-Assessment Manikin) method \cite{Bradley1994} to quickly allow users to assess their emotions on a dual 9 point scale.
 	
 	\subsection{Demographic data and supplemental information} \label{sec:demographics}
 	
@@ -229,13 +285,20 @@ Under real conditions it can be expected that the e-learning interface will caus
 		\item What is your level of English knowledge? \\ \
 			[Beginner  / Intermediate / Advanced / Fluent]
 		\item Occupation: \\ \ [High school student / Undergraduate Student / Graduate Student / Doctorate / Professional or Working]
+		\item Email (optional)
 	\end{enumerate}
 
-	The age groups are taken in accordance with suggestions provided by the Standard International Age Classifications \cite{UN1982} with slight modifications to exclude ages below 18. Further the study would focus on ages up to 44. Ages above 44 could potentially skew results due factors not considered by present study. Primary focus audience lies between ages of 18 and 34.
+	Gender (Question 1) allows to uncover difference in performance or response due to gender. Possible disparities are expected to be observed as described in \ref{sec:preconditioning}
+
+	The age groups (Question 2) are taken in accordance with suggestions provided by the Standard International Age Classifications \cite{UN1982} with slight modifications to exclude ages below 18. Further the study would focus on ages up to 44. Ages above 44 could potentially skew results due factors not considered by present study. Primary focus audience lies between ages of 18 and 34.
 	
-	Question 4 is used to validate the requirement of at least an "advanced" proficiency in English. Participant choosing anything lower could suggest either invalid data or problems with the creativity task due to language issues. In this case participant will be considered for removal. \todo{evaluate this claim}
+	Native speakers (Question 3) might potentially score higher on the creativity task due to cultural influence of using colloquial expressions. This assumption is challenged during data analysis in section \ref{sec:data-validity}
 	
-	Last field allows the user to enter their email address for participation in the raffle and complies with the motivational promise at the beginning of the experiment.
+	Question 4 is used to validate the requirement of at least an "advanced" proficiency in English. Participant choosing anything lower could suggest either invalid data or problems with the creativity task due to language issues. In this case participant is considered for removal. \todo{evaluate this claim}
+	
+	Occupation is asked simply for additional context into the participant.
+	
+	Final email field allows the user to enter their email address for participation in the raffle and complies with the motivational promise at the beginning of the experiment.
 
 	\subsection{E-learning activity logging} \label{sec:activitylog}
 	%\input{activity-logging.tex}
@@ -283,6 +346,7 @@ Under real conditions it can be expected that the e-learning interface will caus
 		\label{lst:db_object}
 	\end{listing}
 
+\toDo{specify object}
 
 		
 		\paragraph{xAPI adaptation} - 
@@ -315,6 +379,14 @@ Through this architecture (as shown in figure \ref{fig:app-architecture}), it is
 	
 	[TODO:] Describe data preparation, how many people participated, demographics data, distributions.
 	[TODO:] Show general statistical data
+	
+	\subsection{Validity} \label{sec:data-validity}
+	
+	\paragraph{Native speakers} 
+	\textbf{H\textsuperscript{0}:}  Native speakers (Question 3) do not score differently on the creativity task due to cultural influence 
+	
+	\paragraph{Females} 
+	\textbf{H\textsuperscript{0}:} Female reaction to Q2 Preconditioning is not different than male
 	
 	\subsection{Evaluation}
 	

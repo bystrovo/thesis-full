@@ -54,7 +54,6 @@ final,
 
 
 
-
 % Use “\cite{NEEDED}” to get Wikipedia-style “citation needed” in document
 %\usepackage{ifthen}
 %\let\oldcite=\cite
@@ -84,6 +83,10 @@ final,
 \mitverteidigung % entfernen, falls keine Verteidigung erfolgt
 \makeTitel
 
+\newpage
+\pagestyle{plain}
+\pagenumbering{roman}   % define page number in roman style
+\setcounter{page}{1}    % start page numbering
 % -----------------------------
 % --- frontmatter: Contents ---
 % -----------------------------
@@ -92,6 +95,10 @@ final,
 % -------------------------------
 % --- main body of the thesis ---
 % -------------------------------
+\clearpage
+\setcounter{page}{1}    % start page numbering anew
+\pagenumbering{arabic}  % page numbers in arabic style
+
 \input{content.tex}
 
 \clearpage
@@ -120,7 +127,7 @@ final,
 % ---------------------------------------------------
 % --- frontmatter: List of Excerpts ---
 % ---------------------------------------------------
-\renewcommand\listoflistingscaption{List of Excerpts}
+\renewcommand\listoflistingscaption{List of Listings}
 \listoflistings
 % ---------------------------------------------------
 % --- frontmatter: List of Figures ---
