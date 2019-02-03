@@ -22,3 +22,7 @@
 *.out
 *.synctex.gz
 *.pdf
+
+# minted
+_minted*
+*.pyg
