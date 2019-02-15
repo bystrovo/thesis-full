@@ -18,3 +18,17 @@
 \end{listing}
 
 
+\begin{listing}[ht!]
+	\begin{minted}{sql}
+	select users.index, 
+	count(*)
+	from df_live_sessions as sessions
+	left join df_live_users as users on "userID"=users.index 
+	where started is not null
+	and finished is not null
+	group by 1;
+	\end{minted}
+	
+	\label{itm:sql_check_single_session_per_user}
+	\caption{SQL Statement: Checks whether one user only has one session}
+\end{listing}

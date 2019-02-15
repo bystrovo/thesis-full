@@ -1,13 +1,13 @@
 \documentclass[
-a4paper,
-pagesize,
-pdftex,
-12pt,
-twoside, % + BCOR darunter: für doppelseitigen Druck aktivieren, sonst beide deaktivieren
-BCOR=5mm, % Dicke der Bindung berücksichtigen (Copyshop fragen, wie viel das ist)
-ngerman,
-fleqn,
-final,
+	a4paper,
+	pagesize,
+	pdftex,
+	12pt,
+	twoside, % + BCOR darunter: für doppelseitigen Druck aktivieren, sonst beide deaktivieren
+	BCOR=5mm, % Dicke der Bindung berücksichtigen (Copyshop fragen, wie viel das ist)
+	ngerman,
+	fleqn,
+	final,
 ]{scrartcl}
 \usepackage{ucs}
 \usepackage[utf8x]{inputenc} % Eingabekodierung: UTF-8
@@ -24,6 +24,7 @@ final,
 \usepackage{setspace}\onehalfspacing
 \usepackage[loose,nice]{units} %replace "nice" by "ugly" for units in upright fractions
 \usepackage{color}
+%\usepackage{babel}
 %\usepackage{hyperref}
 
 
@@ -117,6 +118,8 @@ final,
 \newpage
 \input{app_tables}
 
+\clearpage
+
 % excerpts
 \newpage
 \input{app_excerpts}
@@ -125,14 +128,16 @@ final,
 
 
 % ---------------------------------------------------
+% --- frontmatter: List of Figures ---
+% ---------------------------------------------------
+\listoffigures
+
+% ---------------------------------------------------
 % --- frontmatter: List of Excerpts ---
 % ---------------------------------------------------
 \renewcommand\listoflistingscaption{List of Listings}
 \listoflistings
-% ---------------------------------------------------
-% --- frontmatter: List of Figures ---
-% ---------------------------------------------------
-\listoffigures
+
 % ---------------------------------------------------
 % --- frontmatter: List of Tables ---
 % ---------------------------------------------------
