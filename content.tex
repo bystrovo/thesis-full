@@ -43,6 +43,14 @@ Discussion centers on potential practical implications of the present results, a
 		Over the years of psychological research, models of emotion have taken a range of representations \cite{SreejaPSMahalakshmi2017}.
 		A popular approach is the "Circumplex Model of Affect" \cite{Russell1980}, where emotions can be summarized and laid out in a two-dimensional space. The horizontal axis describing the "pleasure" (futher used as valence) dimension. The vertical axis - the arousal dimension. These dimensions are treated as independent.
 		
+		\begin{figure}[t]
+			\begin{center}
+				\includegraphics[width=150px]{graphics/Valence-Arousal-Model-0.png}
+				\caption{Valence Arousal Model. Figure adapted from \cite{Song2013} \label{fig:valence_arousal_model}}
+				
+			\end{center}
+		\end{figure}
+	
 		Assumptions in this paper are largely based upon the "Circumplex Model". I classify possible emotional states into four quadrants which are mutually discrete. To simplify, they are be labeled for further reference as shown in figure \ref{fig:valence_arousal_model}):
 		\begin{enumerate}
 			\item[Q1:] Angry 	(Quadrant 1)
@@ -58,13 +66,7 @@ Discussion centers on potential practical implications of the present results, a
 		
 		\cite{SreejaPSMahalakshmi2017} Emotion Models: A Review
 		
-		\begin{figure}
-			\begin{center}
-				\includegraphics[width=150px]{graphics/Valence-Arousal-model-showing-the-quadrants-of-the-four-emotion-tags-used-in-this_W640.jpg}
-				\caption{Valence Arousal Model. Figure from \cite{Song2013} \label{fig:valence_arousal_model}}
-				
-			\end{center}
-		\end{figure}
+		
 		
 		\subsubsection{Visual interface and emotion}
 		
@@ -250,7 +252,7 @@ Discussion centers on potential practical implications of the present results, a
 		
 		
 	
-	\subsection{Hypotheses}
+	\subsection{Hypotheses} \label{sec:hypothesis}
 	
 		To validate if there is a difference between emotional responses to the two different design approaches and consequently check if any design differences lead to a different performance of learning sessions two hypotheses are proposed:
 	
@@ -278,7 +280,7 @@ To facilitate the study I make assumptions about the medium in which e-learning 
 		
 		\item[0.] \textbf{Clustering:} Each participant is assigned an interface version (one of two) and the preconditioning group (one of four) at random before first load of the application.
 		
-		\item \textbf{Emotional report:} A short emotional self-reporting questionnaire (SAM \ref{sec:selfeval}) is used to acquire initial valence and arousal ratings
+		\item \textbf{Emotional report [SAM1]:} A short emotional self-reporting questionnaire (SAM \ref{sec:selfeval}) is used to acquire initial valence and arousal ratings
 		
 		\item \textbf{Preconditioning:} Each participant is shown a set of emotional images and preconditioned to be in one of 4 states:
 			\textbf{1}: Positive valence / high arousal;
@@ -288,13 +290,13 @@ To facilitate the study I make assumptions about the medium in which e-learning 
 			
 		Choice of stimuli and their presentation is described further in chapter \ref{sec:preconditioning}
 			
-		\item \textbf{Emotional report:} Emotional self-reporting questionnaire (SAM \ref{sec:selfeval}) to validate, whether preconditioning has had a sufficient and expected effect on the participant.
+		\item \textbf{Emotional report [SAM2]:} A second emotional self-reporting questionnaire (SAM \ref{sec:selfeval}) to validate, whether preconditioning has had a sufficient and expected effect on the participant.
 		
 		\item \textbf{Experiment 1:} Slightly modified classic memory game. The participant is presented with a grid of tiles, each tile containing an image. During 10 seconds at the beginning of the experiment all tiles are open to allow to memorize the images. After which all images are hidden. Only 2 tiles can be opened at any one time. Once both tiles of the same image are open they are marked as solved. The goal is to solve all tiles. Detailed description in section \ref{sec:memory}
 		
 		\item \textbf{Experiment 2:} Remote Associates Test (RAT). A generalized creativity test developed by Mednick \cite{Mednick1962} in 1962. Each participant is presented with a number of word sets. Each set consists of 3 words that are shown to the participant and one target word that is hidden from the them. The target word is semantically connected to all 3 visible words. Detailed description in section \ref{sec:creativity}
 		
-		\item \textbf{Emotional report:} A second emotional self-reporting questionnaire (SAM \ref{sec:selfeval}) is used to establish, whether and which effect tasks and interface have had on the participant's emotion.
+		\item \textbf{Emotional report [SAM3]:} A third emotional self-reporting questionnaire (SAM \ref{sec:selfeval}) is used to establish, whether and which effect tasks and interface have had on the participant's emotion.
 		
 		\item \textbf{Demographic data:} Final step adds additional personal context data for each participant through a questionnaire to complement data analysis (discussed in \ref{sec:demographics}).
 		
@@ -354,7 +356,7 @@ To facilitate the study I make assumptions about the medium in which e-learning 
 		In this test participant attempts to match pairs of images which are displayed face down. 
 		The constraint is that no more than two images can be turned around at any point in time. Subject begin turning cards at random order until they notice a second card that displays an image that has been turned over before. Once a pair of same images is found they are removed from the game.
 		
-		The test has been used previously to test memory performance by \cite{McBurney1997}
+		The test has been previously used in \cite{McBurney1997} to test memory performance between men and women.
 		
 		In the current study an adaptation of this game consists of \textit{twenty one pairs} of images that are arranged on a card grid of six by seven cards. Images for the cards in this experiment are taken from the Bank Of Standardized Stimuli (BOSS). BOSS is a set of normative visual stimuli intended for use in cognitive research. library \cite{Brodeur2010}. Images are taken in "png" format with a transparent background and placed on slightly colored card background in the interface. Both living and non-living images are selected. Among them are pictures of fruits and vegetables, technology items, and sport activity items.
 		Table (\ref{table:boss-words}) presents the full list of the used BOSS image items in the current study.
@@ -747,7 +749,9 @@ Learning Modules submit task-emotion fit data to the emotion control layer when 
 	
 	As assessed by an inspection of the box-plot some outliers are present in the data. As I am taking the average click delay of participants, their respective value can be skewed by the underlying data. The original event data shows some participants taking a disproportionately longer breaks between clicks. Either they were distracted by something or they took their time to select the second card. Some participants taking longer belong to the age group "45plus". In this case the delay could be explained by a slower mouse movement to target. At the same time some participants (those who have a maximal click delay of more than 10 seconds) were apparently distracted, with one participant taking more than 744 seconds to click on card2. As a result I decided that these outliers are not representative of the general click-rate. Six outliers are removed for this statistical test.
 	
-	Average click delays are normally distributed for each level of the theme version, as assessed by Shapiro-Wilk's test (p > .05, actual values for theme0 with p = 0.307, theme1 with p = 0.374). Among 47 participants with theme0 and 52 with theme1, those getting theme version 0 have had a shorter delay between clicks on the first and second cards (M = 1 093ms, SD = 227ms), while those getting theme version 1 spent longer to click on the second card (M = 1 537ms, SD = 332ms). The click delay for theme0 is 443ms, 95\% CI [556 to 330] shorter than for theme1. The results are statistically significant (based on Welch t-test) on a p < 0.001 confidence level ( t(90601) = -7811 ).
+	Average click delays are normally distributed for each level of the theme version, as assessed by Shapiro-Wilk's test (p > .05, actual values for theme0 with p = 0.307, theme1 with p = 0.374). Among 47 participants with theme0 and 52 with theme1, those getting theme0 have had a shorter delay between clicks on the first and second cards (M = 1 093ms, SD = 227ms), while those getting theme version 1 spent longer to click on the second card (M = 1 537ms, SD = 332ms). The click delay for theme0 is 443ms, 95\% CI [556 to 330] shorter than for theme1. The results are statistically significant (based on Welch t-test) on a p < 0.001 confidence level ( t(90601) = -7811 ).
+	
+	According to this analysis, the delay difference of 443ms, which is highly similar to the 450ms predicted due to animation length and character (accelerated rotation) makes time based metrics not applicable for comparison between theme0 and theme1 in their original state.
 	
 	Based on these findings the most objective E1 performance metric appears to be \textit{e1-pairs-opened}.
 	\textit{e1-first-miss} might further give insight on the single instance of memory performance at the beginning of the game after 10 seconds of memorization.
@@ -771,13 +775,15 @@ Learning Modules submit task-emotion fit data to the emotion control layer when 
 		\subsubsection{Native speakers} 
 		\textbf{H\textsubscript{0}:}  Native speakers (Question 3) do not score differently on the creativity task due to cultural influence 
 		
+		\toDo{TODO}
+		
 		\subsubsection{Females reaction to "happy" preconditioning}
 		
 		Laboratory tests with female participants provided feedback, that "happy" preconditioning which contains some sexually suggestive images or a female body, does not yield a positive effect on valence. Following analysis provides a check whether female reactions to these images is significantly different from males. The test can be conducted on the \textit{valence-pre} variable or, alternatively, on the delta of valence-preprecond and valence-pre, which I name \textit{valence-delta-1}
 		 
 		\textbf{H\textsubscript{0}:} Female reaction to Q2 Preconditioning is not different than male
 		
-		
+		\toDo{TODO}
 		
 		\subsubsection{Preconditioning effectiveness}
 		
@@ -785,7 +791,7 @@ Learning Modules submit task-emotion fit data to the emotion control layer when 
 		The figure shows that on average the affect ratings are shifting in the expected directions, as per preconditioning type. 
 		Preconditioning 0 (angry) shifts the average of valence down by about four points of the nine-point scale (from 6.2 to 2.4), while arousal rises (3.8 to 5.1). Preconditioning 1 (happy) shifts valence from a slightly positive value of 5.8 to 6.1 and raises arousal from 3.7 to 4.8. 
 		Preconditioning 2 (sad) lowers the average valence from 6.4 to 4.1 and arousal is slightly higher with a 0.13 difference (from 3.82 to 3.95).
-		Preconditioning 3 (calm) keeps valence positive with a slight decrease from 6.3 to about 6.1 and arousal is lowered from 4 to 3.5.
+		Preconditioning 3 (calm) keeps valence positive with a slight decrease from 6.3 to about 6.1 and arousal is lowered from 4 to 3.5. For exact figures consult table \ref{tbl:distributionOfAffect}.
 		
 \begin{figure}[h!]
 	\centering
@@ -794,7 +800,7 @@ Learning Modules submit task-emotion fit data to the emotion control layer when 
 	\label{fig:after-preconditioning-avg}
 \end{figure}
 		
-		For exact figures consult table \ref{tbl:distributionOfAffect}. As there is noticeable dispersion with the standard deviation of at least 1.19 points, I expect to see some participants not falling in the quadrant according to the preconditioning. As closer look is provided by the cross-table of \textit{quadrant-pre} variable and \textit{preconditioning} variable shown in Figure \ref{fig:preconditioningsuccessbygender}.  at the  (green, light-grey for monochrome) 
+		 As there is noticeable dispersion with the standard deviation of at least 1.19 points, I expect to see some participants not falling in the quadrant according to the preconditioning. A closer look is provided by the cross-table of \textit{quadrant-pre} variable and \textit{preconditioning} variable shown in Figure \ref{fig:preconditioningsuccessbygender}. The table shows participants, who have rated themselves in the target affect quadrant after preconditioning highlighted in green (or light-gray), and participants, who have rated themselves to be in one of the other quadrants. It is apparent that only about half of participants appear to be in the target quadrant. Despite this, the split is fairly equally distributed among four quadrants with the quadrant 1 being underrepresented, having only seventeen respondents.
 		
 \begin{figure}[h!]
 	\centering
@@ -802,21 +808,78 @@ Learning Modules submit task-emotion fit data to the emotion control layer when 
 	\caption{Affect quadrant by preconditioning group and gender}
 	\label{fig:preconditioningsuccessbygender}
 \end{figure}
-	
+
+
 	\subsection{Analysis}
+	
+	Analysis of data is done with SPSS 25.
 	
 	\subsubsection{Hypothesis 1}
 	
-	To validate if the theme version has any effect on affect values we look at valence and arousal values separately.
-	- 1. compute delta of arousal and valence
-	- 2. remove outliers from 
-	e1-pairs-opened (the <= 22)
-	e2-total-points (none are outliers)
-	e2-correct-guesses (no outliers)
+	As stated in Section \ref{sec:hypothesis} I analyze whether any effect on emotion can be attributed to the theme version. To validate this I look at valence and arousal values separately. The null hypotheses are stated as follows:
 	
-	- convert to categorical variable 
+	\textbf{Null Hypothesis 1} H$_{01}$: There is no difference in \textbf{valence} between users of two different proposed interfaces.
 	
-	\textbf{Hypothesis} H$_{0}$: Two different proposed interfaces do not result in a significant difference in emotional response.
+	\textbf{Null Hypothesis 2} H$_{02}$: There is no difference in \textbf{arousal} between users of two different proposed interfaces.
+	
+	\paragraph{Data preparation and selection}
+	
+	To see the how arousal and valence change from SAM2 to SAM3 steps I compute 2 additional variables:
+	
+	\begin{enumerate}
+		\item \textit{arousal-delta-2}: Change of arousal from SAM2 to SAM3
+		\item \textit{valence-delta-2}: Change of valence from SAM2 to SAM3
+	\end{enumerate}
+	
+	Apart from \textit{theme-version} other variables may contribute to a change of affect. These may include any performance metrics of the users during the task and the "enjoyment" factor of the task itself. As the tasks are the same for both theme versions the "enjoyment" parameter of the task is a controlled variable and can be neglected in the analysis.
+	
+	The performance metrics that are can be expected to influence the mood are specifically \textit{e1-pairs-opened} and \textit{e2-correct-guesses}. Two considerations are very important here: 1) Experiment 1 does not have a "lose" or "win" outcome definition and therefore each persons' own reflection on performance on the memory game is highly subjective. During on-site interviews after the task participants have shown bias towards assessing their performance on the memory game as subpar and much worse than potential other participants, regardless of their actual performance compared to others (which they were not informed about at the time). The effect on emotions from memory test maybe negatively skewed 2) Due to the recency effect, participants, when asked to evaluate their affect, can be heavily biased towards evaluation of their enjoyment of the second experiment (creativity test) as the main criterion for rating affect. The bias is evaluated below.
+	
+	\paragraph{Relationship between e2-correct-guesses and affect values} I assess the relationship between \textit{e2-correct-guesses} with valence-post and arousal-post respectively. Visual inspection of a scatter-plot confirms some monotonic relationship for \textit{valence-post}, but not for \textit{arousal-post}.
+	To assess this relationship a correlation test is conducted for \textit{valence-post}.
+	
+	One outlier (from mturk) with \(native = 1\) and \textit{e2-correct-guesses} = 0 is removed during data preparation under assumption that they did not do the due diligence in solving the experiment questions. Normal distribution is not assumed for \textit{e2-correct-guesses} at this point. Spearman's rank-order correlation coefficient is used.
+	
+%	Several participants with e2-correct-guesses of 0 and 1 are also removed, due to possible general issues with the task. Further, participants with \textit{e1-pairs-opened} lower than 23 and higher than 95 are excluded as invalid. Overall 96 observations are kept as for this analysis.
+	
+	  Results show that there is a statistically significant positive correlation between \textit{valence-post} and \textit{e2-correct-guesses}, r\textsubscript{s} = .331, p < .001.
+	
+	\begin{figure}
+		\centering
+		\includegraphics[width=1\linewidth]{graphics/correlationE2-correct-guesses-affect-post}
+		\caption{}
+		\label{fig:correlatione2-correct-guesses-affect-post}
+	\end{figure}
+
+	No significant correlation is found between \textit{e2-correct-guesses} and \textit{arousal-post}.
+	
+	\paragraph{Variance of e2-correct-guesses by theme version}
+	
+	Because of the relationship between \textit{valence-post} and \textit{e2-correct-guesses}, an analysis of variance is beneficial for H$_{01}$. If the means between groups are equal then the factor \textit{e2-correct-guesses} will have a uniform impact on both groups of \textit{theme-version} in the subsequent analysis of variance for H$_{01}$.
+	
+	Independent samples t-test is performed on the variable \textit{e2-correct-guesses} with a factor variable \textit{theme-version}, to assess whether there is a difference between means of the variable \textit{e2-correct-guesses} across theme versions. Absence of significant difference allows to move forward with the analysis of variance for H$_{01}$ and H$_{02}$. Difference would le
+	
+	\paragraph{Variance of valence by theme and performance}
+	
+	\paragraph{Variance of arousal by theme and performance}
+	
+	\paragraph{Conclusion}
+	
+	...
+	
+	\paragraph{Limitations} According to \cite{Russell2003} each persons average of affect values can vary. After an emotional episode each participant's emotions are bound to converge back to their default values with time. This process is not generalizable and should be accounted on a personal basis with further research. Current analysis is done with the assumption that each participants emotions behave in a similar way, despite evidence laid out in \cite{Russell2003}
+	
+	
+
+%	- 1. compute delta of arousal and valence
+%	- 2. remove outliers from 
+%	e1-pairs-opened (the <= 22)
+%	e2-total-points (none are outliers)
+%	e2-correct-guesses (no outliers)
+%	
+%	- convert to categorical variable 
+	
+	
 	
 	\subsubsection{Hypothesis 2: Task 1}
 	
@@ -826,7 +889,7 @@ Learning Modules submit task-emotion fit data to the emotion control layer when 
 		
 		A look a the data reveals that some users have circumvented the memory game by making a screenshot of the open tiles, or, less probably, having perfect photographic memory. Figure \ref{tbl:e1-pairs-opened} shows the outliers highlighted. Due to this I exclude these respondents from the memory experiment analysis. Four of five participants in this group came from MTurk, one from social media.
 		
-		An additional outlying data-point is revealed when looking at the overall duration of the memory game in seconds - \textit{e1\_total\_duration\_seconds}. Respondent \#74 took several times longer than the nearest neighbor. \ref{fig:memoryoutlier2}. This person clearly made a break during the test and is, therefore, also excluded.
+		An additional outlying data-point is revealed when looking at the overall duration of the memory game in seconds - \textit{e1\_total\_duration\_seconds}. Respondent \#74 took several times longer than the nearest neighbor. \ref{fig:memoryoutlier2}. Participant \#74 clearly made a break during the test and is, therefore, also excluded.
 		
 %		\begin{figure}
 %			\centering
@@ -910,6 +973,10 @@ Learning Modules submit task-emotion fit data to the emotion control layer when 
 	 \paragraph{Sample size}
 	Sample size: at 105 participants, although the distributions are healthy it is not possible to factor data by many parameters due to low statistical significance. groups would have each just a few observations.
 	\toDo{write}
+	
+	
+	
+	An additional question that can be askes is "how much did you enjoy this task" after each experiment to acquire their enjoyment factor.
 	
 	
 
