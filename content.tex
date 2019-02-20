@@ -645,7 +645,7 @@ Learning Modules submit task-emotion fit data to the emotion control layer when 
 	\label{tbl:gender-distribution}
 \end{table}
 	
-	\paragraph{Affect levels} Participants rated their mood a total of 3 times, with the first rating making a baseline before testing begins. Valence and arousal values are rated on a 9 point scale with "1" being the lowest rating and "9" - the highest. Table \ref{tbl:distributionOfAffect} shows the affect ratings per preconditioning group. Post Task values include both theme versions in this table. On average participants began with a slightly positive valence (mean 6.08, SE 1.36) and a slightly low level of arousal (mean 3.78, SE 1.8). \toDo{is there a difference Between theme version groups?}
+	\paragraph{Affect levels} Participants rated their mood a total of 3 times, with the first rating making a baseline before testing begins. Valence and arousal values are rated on a 9 point scale with "1" being the lowest rating and "9" - the highest. Table \ref{tbl:distributionOfAffect} shows the affect ratings per preconditioning group. Post Task values include both theme versions in this table. On average participants began with a slightly positive valence (mean 6.08, SE 1.36) and a slightly low level of arousal (mean 3.78, SE 1.8).
 	
 	\begin{table}[h!]
 	\begin{center}
@@ -777,7 +777,7 @@ Learning Modules submit task-emotion fit data to the emotion control layer when 
 		
 		\toDo{TODO}
 		
-		\subsubsection{Females reaction to "happy" preconditioning}
+		\subsubsection{Female participant reaction to "happy" preconditioning}
 		
 		Laboratory tests with female participants provided feedback, that "happy" preconditioning which contains some sexually suggestive images or a female body, does not yield a positive effect on valence. Following analysis provides a check whether female reactions to these images is significantly different from males. The test can be conducted on the \textit{valence-pre} variable or, alternatively, on the delta of valence-preprecond and valence-pre, which I name \textit{valence-delta-1}
 		 
@@ -835,14 +835,10 @@ Learning Modules submit task-emotion fit data to the emotion control layer when 
 	
 	The performance metrics that are can be expected to influence the mood are specifically \textit{e1-pairs-opened} and \textit{e2-correct-guesses}. Two considerations are very important here: 1) Experiment 1 does not have a "lose" or "win" outcome definition and therefore each persons' own reflection on performance on the memory game is highly subjective. During on-site interviews after the task participants have shown bias towards assessing their performance on the memory game as subpar and much worse than potential other participants, regardless of their actual performance compared to others (which they were not informed about at the time). The effect on emotions from memory test maybe negatively skewed 2) Due to the recency effect, participants, when asked to evaluate their affect, can be heavily biased towards evaluation of their enjoyment of the second experiment (creativity test) as the main criterion for rating affect. The bias is evaluated below.
 	
-	\paragraph{Relationship between e2-correct-guesses and affect values} I assess the relationship between \textit{e2-correct-guesses} with valence-post and arousal-post respectively. Visual inspection of a scatter-plot confirms some monotonic relationship for \textit{valence-post}, but not for \textit{arousal-post}.
-	To assess this relationship a correlation test is conducted for \textit{valence-post}.
-	
-	One outlier (from mturk) with \(native = 1\) and \textit{e2-correct-guesses} = 0 is removed during data preparation under assumption that they did not do the due diligence in solving the experiment questions. Normal distribution is not assumed for \textit{e2-correct-guesses} at this point. Spearman's rank-order correlation coefficient is used.
-	
-%	Several participants with e2-correct-guesses of 0 and 1 are also removed, due to possible general issues with the task. Further, participants with \textit{e1-pairs-opened} lower than 23 and higher than 95 are excluded as invalid. Overall 96 observations are kept as for this analysis.
-	
-	  Results show that there is a statistically significant positive correlation between \textit{valence-post} and \textit{e2-correct-guesses}, r\textsubscript{s} = .331, p < .001.
+	\paragraph{Preparation: Relationship between e2-correct-guesses and affect values} 
+	I assess the relationship between \textit{e2-correct-guesses} with \textit{valence-post} and \textit{arousal-post} respectively. 
+	Visual inspection of a scatter-plot confirms some monotonic relationship for \textit{valence-post}, but not for \textit{arousal-post}.
+	To assess this relationship a correlation test is conducted for \textit{valence-post} and \textit{arousal-post}.
 	
 	\begin{figure}
 		\centering
@@ -850,25 +846,99 @@ Learning Modules submit task-emotion fit data to the emotion control layer when 
 		\caption{}
 		\label{fig:correlatione2-correct-guesses-affect-post}
 	\end{figure}
+	
+	One outlier (from mturk) with \(native = 1\) and \textit{e2-correct-guesses} = 0 is removed during data preparation under assumption, that they did not do the due diligence in solving the experiment questions. Normal distribution is not assumed for \textit{e2-correct-guesses} at this point. Spearman's rank-order correlation coefficient is used in lieu of Pearson correlation due to robustness towards non-normality of the former.
+	
+%	Several participants with e2-correct-guesses of 0 and 1 are also removed, due to possible general issues with the task. Further, participants with \textit{e1-pairs-opened} lower than 23 and higher than 95 are excluded as invalid. Overall 96 observations are kept as for this analysis.
+	
+	Results (illustrated in Figure \ref{fig:correlatione2-correct-guesses-affect-post} ) show that there is a statistically significant positive correlation between \textit{valence-post} and \textit{e2-correct-guesses}, r\textsubscript{s} = .331, p < .001.
+	
+	No statistically significant correlation is found between \textit{e2-correct-guesses} and \textit{arousal-post}.
+	
+	\paragraph{Preparation: Variance of e2-correct-guesses by theme version}
+	
+	Because of the relationship between \textit{valence-post} and \textit{e2-correct-guesses}, an analysis of variance is beneficial for H$_{01}$. If the means between groups are equal then the factor \textit{e2-correct-guesses} will have a uniform impact on both groups of \textit{theme-version} in the subsequent analysis of variance for H$_{01}$ and H$_{02}$.
+	
+	Independent samples t-test is performed on the variable \textit{e2-correct-guesses} with a factor variable \textit{theme-version}, to assess whether there is a difference between means of the variable \textit{e2-correct-guesses} across theme versions. Absence of significant difference allows to move forward with the analysis of variance for H$_{01}$ and H$_{02}$.
+	
+	There are 52 participants with theme0, and 52 with theme1. The values do not show normal distribution per group as assessed by Q-Q Plots observation as well as Shapiro-Wilk test. The split between groups is equal and the skewness of distribution almost equal (-0.63 (SE -0.33) and -0.70 (SE -0.30)). The violation of normality is ignored in this case, as t-test can be considered robust against deviation from normality. The homogeneity of variances is confirmed, as assessed by Levene's test for equality of variances (p = 0.153). The t-test shows that the null hypothesis cannot be rejected and there is no statistically significant mean difference between the two groups (p = .714).
+	
+	For both theme versions the same distribution is observed on \textit{e2-correct-guesses}.
+	
+	
+	\paragraph{Analysis of variance of \textit{valence-post} by theme and performance H$_{01}$ }
+	
+	I test whether there is an interaction effect between \textit{theme-version}, \textit{valence-pre}, and \textit{e2-correct-guesses} on the independent variable \textit{valence-post}.
+	
+	\textit{e1-pairs-opened} metric shows only extremely low correlation with both \textit{arousal-post} and \textit{valence-post} values and is excluded from the following analysis. The assumption here is that \textit{e1-pairs-opened} has no effect on affect values. Their perceived performance, if any, is overshadowed by the second task. As discussed earlier perceived performance for E1 task may be uniformly negative among participants as per their own self-evaluation. No question has been asked from participants about their perceived performance or enjoyment of the E1 task in the subsequent questionnaire.
+	
+	Metrics \textit{valence-pre}, and \textit{e2-correct-guesses} are continuous variables and for this test are transformed into categorical.
+	\textit{valence-pre} is transformed into \textit{valence-group-pre} and split according to affect quadrant definition at the value \( V(pre) >= 5 \coloneqq 2; V(pre) < 5 \coloneqq 1\). \textit{e2-correct-guesses} \textit{e2-correct-guesses-grp} is split on the 50th percentile (at the value \(X >= 14 \coloneqq 2, X < 14 \coloneqq 1\))
+	
+	\begin{itemize}
+		\item \textbf{Dependent:} \textit{valence-post}
+		\item \textbf{Independent:} \textit{theme-version}, \textit{valence-group-pre}, \textit{e2-correct-guesses-grp}
+	\end{itemize}
+	
+	A three-way ANOVA is conducted.
+	Three outliers are removed, including two participants with extreme, almost unrealistic self-evaluation spread, and a participant, who did not solve any creativity task, despite being a native speaker (ID: IW3r*).
+	Levene's test for equality of variances indicates homogeneity of variances for \textit{valence-post} for all group combinations (\(p = .079\)). 
+	102 observations are included in the analysis. No statistically significant three-way interaction between \textit{theme-version, valence-group-pre and e2-correct-guesses-grp} could be observed, \(F(1, 94) = .161, p = .689\). Further, there is no statistically significant two-way interactions for each combination of these variables. (A problem could be due to samples size,  as graphical representation shows some possible interaction. Groups contain between 9 and 32 observations).
+	
+	It cannot be concluded that theme version has an effect on valence.
+	
+	\paragraph{Analysis of variance of \textit{arousal-post} by theme and performance H$_{02}$}
+	
+	A similar procedure as above to assess an interaction effect between \textit{theme-version}, \textit{arousal-pre}, and \textit{e2-correct-guesses} on the independent variable \textit{arousal-post}. Categorical metrics derived in the previous analysis are used during this analysis again. Continuous variable \textit{arousal-pre} is transformed to categorical on the equivalent axis split as previous analysis into \textit{arousal-group-pre}
+	
+	\begin{itemize}
+		\item \textbf{Dependent:} \textit{arousal-post}
+		\item \textbf{Independent:} \textit{theme-version}, \textit{arousal-group-pre}, \textit{e2-correct-guesses-grp}
+	\end{itemize}
+	
+	Categorical metrics derived in the previous analysis are used during this analysis again. A three-way ANOVA is conducted. Observations with (ID: IW3r*) and one outlier with extreme spread of ratings (possibly influenced by poor performance on the creativity task) is removed. No further outliers are present as per inspection of the box-plots.
+	Shapiro-Wilk's test of normality shows three groups non-normally distributed (theme0, e2 perf - high, high arousal group, p = .027; theme1, low arousal group, both e2 perf groups with p = .005 and p = .018 for low and high respectively). Observation count is between 9 and 15 per group. Transformation attempts on the dependent variable did not yield a positive result for normality. I accept the violations of normality at this stage.
+			      
+	There is a statistically significant three-way interaction between \textit{theme-version}, \textit{arousal-group-pre}, and \textit{e2-correct-guesses-grp}, 
+	F(1, 95) = 5.585, p = .020.
+	
+	According to this, simple two-way interaction between \textit{theme-version} * \textit{e2-correct-guesses-grp} based on each level of mediator variable \textit{arousal-group-pre} is assessed.
+	
+	There is a statistically significant simple two-way interaction between \textit{theme-version} and \textit{e2-correct-guesses-grp} for the high arousal group after preconditioning, \(F(1, 95) = 6.597, p = .012\), but not for low arousal group, \(F(1, 95) = .427, p = .515\).
+	
+	Statistical significance is shown on a $ p < 0.05 $, as well as on $ p < 0.025 $ level as per Bonferroni adjustment technique (with simple two-way interactions = 2).
+	
+	The analysis is followed up with simple simple main effects, with respect to: \textit{arousal-group-pre} $ = high $;
+	
+	There is a statistically significant simple simple main effect of \textit{theme-version} for high arousal-group-pre participants (i.e. participants getting the 0 or 1 preconditioning) at high amount of e2-correct-guesses (group 2), 
+	$ F(1, 95) = 5.785, p < .018 $), 
+	but no significant effect for high arousal-group-pre participants at low \textit{e2-correct-guesses-grp}, 
+	$ F(1, 95) = 1.683, p = .198 $. 
+	
+	Table in Figure \ref{fig:h02-simple-simple-main-effects-test-results-table} shows the simple simple main effects and their significance. The significant main effect is highlighted in Figure \ref{fig:h02-simple-simple-main-effects-highlighted}.
+	
+	
+\begin{figure}
+	\centering
+	\includegraphics[width=1\linewidth]{graphics/H02-simple-simple-main-effects-highlighted}
+	\caption{Significant simple simple main effects of the three-way-anova}
+	\label{fig:h02-simple-simple-main-effects-highlighted}
+\end{figure}
+	
+\begin{figure}
+	\centering
+	\includegraphics[width=1\linewidth]{graphics/H02-simple-simple-main-effects-test-results-table}
+	\caption{Three-way ANOVA - simple simple main effects table}
+	\label{fig:h02-simple-simple-main-effects-test-results-table}
+\end{figure}
 
-	No significant correlation is found between \textit{e2-correct-guesses} and \textit{arousal-post}.
-	
-	\paragraph{Variance of e2-correct-guesses by theme version}
-	
-	Because of the relationship between \textit{valence-post} and \textit{e2-correct-guesses}, an analysis of variance is beneficial for H$_{01}$. If the means between groups are equal then the factor \textit{e2-correct-guesses} will have a uniform impact on both groups of \textit{theme-version} in the subsequent analysis of variance for H$_{01}$.
-	
-	Independent samples t-test is performed on the variable \textit{e2-correct-guesses} with a factor variable \textit{theme-version}, to assess whether there is a difference between means of the variable \textit{e2-correct-guesses} across theme versions. Absence of significant difference allows to move forward with the analysis of variance for H$_{01}$ and H$_{02}$. Difference would le
-	
-	\paragraph{Variance of valence by theme and performance}
-	
-	\paragraph{Variance of arousal by theme and performance}
+	For high arousal group with a high performance on E2 test simple simple main effect comparisons shows mean \textit{delta of arousal} for \textbf{theme0} is 0.385 of a point (SD = 0.543) and for \textbf{theme1} is -1.500 (SD = 0.565). The mean difference is statistically significant being 1.885 point, 95\% CI [0.329, 3.440], p = 0.018.
 	
 	\paragraph{Conclusion}
 	
-	...
+	No statistically significant difference of affect could be found for valence values across all groups. There is a statistically significant mean difference of arousal between theme versions for high performers of E2 when they are in angry or happy state (high arousal), whereas theme0 kept higher arousal for participants. Theme0 lowered the arousal values.
 	
-	\paragraph{Limitations} According to \cite{Russell2003} each persons average of affect values can vary. After an emotional episode each participant's emotions are bound to converge back to their default values with time. This process is not generalizable and should be accounted on a personal basis with further research. Current analysis is done with the assumption that each participants emotions behave in a similar way, despite evidence laid out in \cite{Russell2003}
-	
+	\paragraph{Limitations} According to \cite{Russell2003} each persons average of affect values can vary. After an emotional episode each participant's emotions are bound to converge back to their default values with time. This process is not generalizable and should be accounted on a personal basis with further research. Due to current study design analysis is done with the assumption that each participants emotions behave in a similar way, despite evidence laid out in \cite{Russell2003}.
 	
 
 %	- 1. compute delta of arousal and valence
@@ -877,10 +947,9 @@ Learning Modules submit task-emotion fit data to the emotion control layer when 
 %	e2-total-points (none are outliers)
 %	e2-correct-guesses (no outliers)
 %	
-%	- convert to categorical variable 
-	
-	
-	
+%	- convert to categorical variable
+
+
 	\subsubsection{Hypothesis 2: Task 1}
 	
 		\paragraph{Cleaning data}
@@ -970,13 +1039,12 @@ Learning Modules submit task-emotion fit data to the emotion control layer when 
 	
 	Some participants reported struggling with the term "valence" during the emotional questionnaire. Having displayed the two extremes as "Negative" and "Positive" as well as the SAM pictorial guidance were not sufficient. The term has been considered to be replaced with "pleasure" during the course of the study phase. Although, due to danger of skewing the results, it has not been implemented.
 		
-	 \paragraph{Sample size}
-	Sample size: at 105 participants, although the distributions are healthy it is not possible to factor data by many parameters due to low statistical significance. groups would have each just a few observations.
+	 \paragraph{Sample size} is at 105 participants. Although the distributions are healthy it is not possible to factor data by many parameters due to low statistical significance, as the resulting groups would have each just a few observations.
 	\toDo{write}
 	
 	
 	
-	An additional question that can be askes is "how much did you enjoy this task" after each experiment to acquire their enjoyment factor.
+	An additional question that can be asked is "how much did you enjoy this task" after each experiment to acquire their enjoyment factor.
 	
 	
 
