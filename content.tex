@@ -725,7 +725,7 @@ Learning Modules submit task-emotion fit data to the emotion control layer when 
 		\label{fig:participant_attributes}
 	\end{table}
 
-	\subsubsection{Defining Attributes} Initial events-based data is transformed into metrics for each participant as displayed in table (\ref{fig:participant_attributes}). Prefix "E1" prefix represents Experiment1 (Memory test), and Prefix "E2" represents Experiment2 (Creativity test). \textit{Arousal-preprecond} and \textit{valence-preprecond} are the values measured initially at the start of the experiment before any intervention. Arousal-pre and valence-pre represent the measurement after preconditioning step, while arousal-post and valence-post are the values that are reported by participants after finishing both experiment tasks.
+	\subsubsection{Defining Attributes} Initial events-based data is transformed into metrics for each participant as displayed in table (\ref{fig:participant_attributes}). Prefix "E1" prefix represents Experiment1 (Memory test), and Prefix "E2" represents Experiment2 (Creativity test). \textit{Arousal-preprecond} and \textit{valence-preprecond} are the values measured initially at the start of the experiment before any intervention. Variables \textit{arousal-pre} and \textit{valence-pre} represent the measurement after preconditioning step. Finally, \textit{arousal-post} and \textit{valence-post} are the values that are reported by participants after finishing both experiment tasks.
 
 	\paragraph{Emotion quadrants}
 	
@@ -737,7 +737,7 @@ Learning Modules submit task-emotion fit data to the emotion control layer when 
 		\item Q4 = (arousal < 5 \& valence  >= 5)
 	\end{enumerate*}. Resulting variables are \textit{quadrant-initial}, \textit{quadrant-pre}, \textit{quadrant-post}.
 	
-	\paragraph{E1 metrics}
+	\paragraph{E1 metrics} \label{sec:e1metrics}
 	
 	E1 performance variables are described in section \ref{sec:memory-parameters}. Following consideration is dedicated to choosing the right performance metric and discussion on applicability of others based on received data.
 	
@@ -843,7 +843,7 @@ Learning Modules submit task-emotion fit data to the emotion control layer when 
 	\begin{figure}
 		\centering
 		\includegraphics[width=1\linewidth]{graphics/correlationE2-correct-guesses-affect-post}
-		\caption{}
+		\caption{Correlation test for valence-post, arousal-post, and e2-correct-guesses}
 		\label{fig:correlatione2-correct-guesses-affect-post}
 	\end{figure}
 	
@@ -866,7 +866,7 @@ Learning Modules submit task-emotion fit data to the emotion control layer when 
 	For both theme versions the same distribution is observed on \textit{e2-correct-guesses}.
 	
 	
-	\paragraph{Analysis of variance of \textit{valence-post} by theme and performance H$_{01}$ }
+	\paragraph{H$_{01}$ Analysis of variance of \textit{valence-post} by theme and performance}
 	
 	I test whether there is an interaction effect between \textit{theme-version}, \textit{valence-pre}, and \textit{e2-correct-guesses} on the independent variable \textit{valence-post}.
 	
@@ -887,7 +887,7 @@ Learning Modules submit task-emotion fit data to the emotion control layer when 
 	
 	It cannot be concluded that theme version has an effect on valence.
 	
-	\paragraph{Analysis of variance of \textit{arousal-post} by theme and performance H$_{02}$}
+	\paragraph{H$_{02}$ Analysis of variance of \textit{arousal-post} by theme and performance}
 	
 	A similar procedure as above to assess an interaction effect between \textit{theme-version}, \textit{arousal-pre}, and \textit{e2-correct-guesses} on the independent variable \textit{arousal-post}. Categorical metrics derived in the previous analysis are used during this analysis again. Continuous variable \textit{arousal-pre} is transformed to categorical on the equivalent axis split as previous analysis into \textit{arousal-group-pre}
 	
@@ -950,15 +950,32 @@ Learning Modules submit task-emotion fit data to the emotion control layer when 
 %	- convert to categorical variable
 
 
-	\subsubsection{Hypothesis 2: Task 1}
+	\subsubsection{Hypothesis 2: E1 Memory} \label{section:h2e1}
 	
-		\paragraph{Cleaning data}
+		\paragraph{Cleaning data} %\label{section:h2e1-cleaning}
 		
-		First, I check for irregularities with the data and outliers.
+		First, I check for irregularities with the data and outliers on the \textit{e1-pairs-opened}.
 		
-		A look a the data reveals that some users have circumvented the memory game by making a screenshot of the open tiles, or, less probably, having perfect photographic memory. Figure \ref{tbl:e1-pairs-opened} shows the outliers highlighted. Due to this I exclude these respondents from the memory experiment analysis. Four of five participants in this group came from MTurk, one from social media.
+		A look at the data reveals, that some users have circumvented the memory game by making a screenshot of the open tiles, or, less probably, having perfect photographic memory. Figure \ref{tbl:e1-pairs-opened} shows the outliers highlighted. Due to this I exclude these respondents from the memory experiment analysis. Four of five participants in this group came from MTurk, one from social media.
 		
-		An additional outlying data-point is revealed when looking at the overall duration of the memory game in seconds - \textit{e1\_total\_duration\_seconds}. Respondent \#74 took several times longer than the nearest neighbor. \ref{fig:memoryoutlier2}. Participant \#74 clearly made a break during the test and is, therefore, also excluded.
+		\begin{table}[]
+			\begin{center}
+				\begin{tabular}{|l|l|l|l|}
+					\hline 
+					source & gender & e1-total-duration-seconds & e1-pairs-opened \rule[-2ex]{0pt}{6ex} \\ \hline \hline
+					turk   & male   & 104                          & \cellcolor[HTML]{FFFFC7}21                \\ \hline
+					turk   & female & 86                           & \cellcolor[HTML]{FFFFC7}22                \\ \hline
+					turk   & male   & 122                          & \cellcolor[HTML]{FFFFC7}22                \\ \hline
+					turk   & male   & 90                           & \cellcolor[HTML]{FFFFC7}22                \\ \hline
+					social & female & 185                          & \cellcolor[HTML]{FFFFC7}22                \\ \hline
+					social & female & 218                          & 34                \\ \hline
+				\end{tabular}
+			\end{center}
+			\caption{Memory outliers}
+			\label{tbl:e1-pairs-opened}
+		\end{table}
+	
+		An additional outlying data-point is revealed when looking at the overall duration of the memory game in seconds - \textit{e1-total-duration-seconds}. Respondent \#74 took several times longer than the nearest neighbor. Figure \ref{fig:memoryoutlier2} shows the box-plot distribution of the variable. Participant \#74 made a break during the test and is, therefore, also excluded. While total duration is not a performance metric as reasoned in section \ref{sec:e1metrics}, taking a break can be considered a strong mediating variable when dealing with short-term memory.
 		
 %		\begin{figure}
 %			\centering
@@ -966,23 +983,6 @@ Learning Modules submit task-emotion fit data to the emotion control layer when 
 %			\caption{Memory outliers}
 %			\label{fig:memoryoutlier1}
 %		\end{figure}
-	
-		\begin{table}[]
-		\begin{center}
-			\begin{tabular}{|l|l|l|l|}
-				\hline 
-				source & gender & e1\_total\_duration\_seconds & e1\_pairs\_opened \rule[-2ex]{0pt}{6ex} \\ \hline \hline
-				turk   & male   & 104                          & \cellcolor[HTML]{FFFFC7}21                \\ \hline
-				turk   & female & 86                           & \cellcolor[HTML]{FFFFC7}22                \\ \hline
-				turk   & male   & 122                          & \cellcolor[HTML]{FFFFC7}22                \\ \hline
-				turk   & male   & 90                           & \cellcolor[HTML]{FFFFC7}22                \\ \hline
-				social & female & 185                          & \cellcolor[HTML]{FFFFC7}22                \\ \hline
-				social & female & 218                          & 34                \\ \hline
-			\end{tabular}
-		\end{center}
-		\caption{Memory outliers}
-		\label{tbl:e1-pairs-opened}
-		\end{table}
 		
 		\begin{figure}
 			\centering
@@ -991,17 +991,121 @@ Learning Modules submit task-emotion fit data to the emotion control layer when 
 			\label{fig:memoryoutlier2}
 		\end{figure}
 	
-		
+		Table \ref{tbl:distribution} shows the distribution of people by affect quadrant group right after preconditioning step. 
 
+		\begin{table}[h!]
+			\centering
+			\begin{tabular}{ll|l|llll|l}
+				\hline
+				\multicolumn{3}{l}{gender} & \multicolumn{4}{l}{quadrant-pre} & Total \\ \hline
+				&              &   & 1.00    & 2.00   & 3.00   & 4.00   &       \\ \hline
+				female  & themeVersion & 0 & 2       & 5      & 6      & 4      & 17    \\
+				&              & 1 & 6       & 3      & 5      & 7      & 21    \\ \hline
+				& Total        &   & 8       & 8      & 11     & 11     & 38    \\ \hline \hline
+				male    & themeVersion & 0 & 4       & 13     & 6      & 9      & 32    \\
+				&              & 1 & 5       & 5      & 7      & 11     & 28    \\ \hline
+				& Total        &   & 9       & 18     & 13     & 20     & 60    \\ \hline \hline
+				Total   & themeVersion & 0 & 6       & 18     & 12     & 13     & 49    \\
+				&              & 1 & 11      & 8      & 12     & 18     & 49    \\ \hline \hline
+				& Total        &   & 17      & 26     & 24     & 31     & 98 	\\ \hline \hline
+			\end{tabular}
+			\caption{Distribution of participants by theme, affect quadrant and gender}
+			\label{tbl:distribution}
+		\end{table}
 		
-		\paragraph{Gender difference}
+		\paragraph{Preparation: Gender differences for E1} \label{sec:gender-differences-E1}
 		
-		\toDo{Check if women are different from men}: Women better \cite{McBurney1997}
+		In a 1997 paper \cite{McBurney1997} suggests that some differences may be observed in the way male and female memory works.
+		
+		As I have unbalanced design with more male participants than female (see table \ref{tbl:distribution}), I assess whether women and men have significantly different memory test scores as measured by \textit{e1-pairs-opened}, and whether this can lead to a mediating effect on the performance across quadrants.
+		
+		Shapiro-Wilk test of normality rejects the null hypothesis of normal distribution. For this analysis I use the non-parametric Mann-Whitney U test, due to not normal distribution. Distributions of the scores for \textit{e1-pairs-opened} are similar for males and females, as assessed by visual inspection (both positively skewed). Median performance on the E1 task is not statistically significantly different between males (48.0) and females (49.0), $ U = 1099.500, z = -0.296, p = 0.768 $. Table \ref{tbl:e1e2means} shows median and mean values for \textit{e1-pairs-opened} across genders.
+		
+		\begin{table}[]
+			\centering
+			\begin{tabular}{l|l|l|l|l}
+				Gender & \multicolumn{2}{l}{Median} & \multicolumn{2}{l}{Mean}       \\ \hline
+				& e1-pairs-opened & e2-total-points & e1-pairs-opened & e2-total-points		\\ \hline
+				female & 49.00             & 283.9820 & 50.18             & 274.6812      \\
+				male   & 48.00             & 297.9740 & 49.80             & 268.9467       \\ \hline
+				Total  & 48.00             & 293.2215 & 49.95             & 271.1703      \\ \hline \hline
+			\end{tabular}
+			\caption{Mean and Median values per gender for E1 and E2 metrics}
+			\label{tbl:e1e2means}
+		\end{table}
 	
-	\subsubsection{Hypothesis 2: Task 2}
+		As the test shows, that men and women do not have a difference in performance on the E1 task, I exclude this variable from further analysis as a mediating parameter.
+		
+		\paragraph{Analysis} 
+		
+		The present analysis tests the null hypothesis:
+		
+		\textbf{H$_{0}$:} Performance of participants on memory task, as measured by \textit{e1-pairs-opened}, is equal using theme 1 compared to using theme 0.
+		
+		With the outliers removed during data cleaning step, variable \textit{e1-pairs-opened} is factored by \textit{theme-version}. Shapiro-Wilk test of normality performed on the factored performance variable rejects the null hypothesis of normal distribution for both groups (theme0, p = 0.005; and theme1, p = 0.000).
+		Some outliers are present in the higher value spectrum.
+		
+		\begin{figure}
+			\centering
+			\includegraphics[width=1\linewidth]{graphics/H2E1-MannWhitneyU}
+			\caption{Frequency graph of \textit{e1-pairs-opened} by theme version for Mann-Whitney U (Hypothesis 2, Experiment 1)}
+			\label{fig:h2e1-mannwhitneyu}
+		\end{figure}
+		
+		Due to outliers, a non-parametric Mann-Whitney U test is performed on the \textit{e1-pairs-opened} with the factor variable \textit{theme-version}. Distributions of the variable are similar for theme0 and theme1, as assessed by visual inspection of the frequency graphs (see Figure \ref{fig:h2e1-mannwhitneyu}). Median amount of pairs opened for theme0 (48) and theme1(48) are not statistically significantly different, U = 1126,5, z = -0.526, p = 0.599.
+		
+		An additional two-way ANOVA is performed to assess whether there is an interaction effect between \textit{quadrant-pre} and \textit{theme-version}. A range of outliers is, once again, present in the higher spectrum across groups, as assessed by box-plot observation. A two-way ANOVA is performed in two runs, once with outliers present (those described in paragraph on cleaning data in section \ref{section:h2e1} are still excluded, N = 98), and once with the most extreme outliers (2 outliers, N = 96) removed.
+		
+		For the analysis \textbf{with outliers present}, normality assumptions are violated for the residuals of two out of eight groups (as per Shapiro-Wilk test): 
+		\begin{itemize*}
+			\item theme = 1, quadrant-pre = 2 (p = 0.007, N = 8);
+			\item theme = 1, quadrant-pre = 4 (p = 0.001, N = 18)
+		\end{itemize*}. 
+		There is homogeneity of variances, as assessed by Levene's test for equality of variances, $ p = 0.449 $.
+		
+		No statistically significant interaction is found for the two variables with outliers present: 
+		\[ F(3, 90) = 0.354, p = .787, \eta_{p}^{2} = .012 \]
+		Followup analysis of main effects shows no statistically significant difference in E1 performance based on theme version ($ F(1, 90) = 0.011, p = .917, \eta_{p}^{2} = 0.00012. $), further it shows no statistically significant difference in E1 performance based on affect quadrant (defined by value of \textit{quadrant-pre}), ($ F(3, 90) = 0.374, p = .772, \eta_{p}^{2} = 0.012 $).
+		
+		%-------
+		
+		For the analysis \textbf{with outliers removed}, normality assumptions are not violated for the residuals (on a confidence level of p < 0.05) as per Shapiro-Wilk test. There is observed homogeneity of variances, $ p = 0.130 $. Interaction effects are not significant. No followup analyses are done in this sub-test, as they are expected to yield comparable results.
+
+		\begin{table}[]
+			\centering
+			\begin{tabular}{ll|l|ll}
+				\hline
+				\multicolumn{2}{l}{Descriptive Statistics}   &    & \multicolumn{2}{l}{e1-pairs-opened} \\ \hline
+				theme-version          & quadrant-pre & N  & Mean          & Std. Deviation        \\ \hline
+				0                      & 1.00         & 6  & 50.17         & 8.909                 \\
+				& 2.00         & 18 & 51.17         & 10.788                \\ 
+				& 3.00         & 14 & 51.21         & 17.480                \\ 
+				& 4.00         & 14 & 50.57         & 13.727                \\ \hline
+				1                      & 1.00         & 11 & 50.27         & 6.451                 \\
+				& 2.00         & 11 & 43.64         & 19.038                \\ 
+				& 3.00         & 13 & 49.31         & 12.828                \\ 
+				& 4.00         & 18 & 46.50         & 11.526                \\ \hline
+			\end{tabular}
+			\caption{Descriptive Statistics for e1-pairs-opened}
+			\label{tbl:group-sized-quadrant-theme-version}
+		\end{table}
+		
+		Results of the analyses show that there are no statistically significant differences across groups of affect or theme versions for experiment 1. With collected data it cannot be determined whether observed outliers are due to people abusing the test or due to other reasons. Therefore, it is not safe to just remove them, as they are believed to represent the population. Moreover, without them, the significance of the test improves only marginally, with no significant differences shown. A bigger sample is advised as some groups contain as little as six observations (see Table \ref{tbl:group-sized-quadrant-theme-version}). Differences, if any, are expected to be in lower percentage levels and therefore a larger sample is advised for any significant result to manifest itself.
+		
+%		FR: Futher research: laboratory testing, more defined group of people, no above 45 people. Both genders can be tested, as there is not believed to be any effect of gender, although should be investigated in future research when applied.
+
+	
+	\subsubsection{Hypothesis 2: E2 Creativity}
 	
 	\paragraph{Data selection}
 	
+	\paragraph{Analysis}
+	
+	The present analysis tests the null hypothesis:
+	
+	\textbf{H$_{0}$:} Performance of participants on memory task, as measured by \textit{e2-total-points}, is equal using interface 1 compared to using interface 0.
+	
+	A two-way ANOVA is performed on the \textit{e2-total-points}
 	
 	
 	
