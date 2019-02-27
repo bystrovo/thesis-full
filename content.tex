@@ -487,20 +487,24 @@ To facilitate the study I make assumptions about the medium in which e-learning 
 
 		\paragraph{Performance variables} \label{sec:creativity-parameters}
 		
+		A range of metrics are calculated and attributed to each participant for analysis:
+		
 		\begin{enumerate}
-			\item Aggregated solving speed: seconds taken to solve a problem on average
-			\item Non-aggregated solving speed: seconds taken to solve each problem
-			\item Idea generation rate: how many attempts (including false ones) are taken within the time limit on average
-			\item Success rate: Number of problems solved successfully
-			\item Frustration/Negative-attention: Amount of false choices after \textit{Hint Word} suggestion appears as ratio to Hint Word suggestion answers.
+			\item Aggregated solving speed: seconds taken to solve a problem on average (e2-avg-duration-per-word)
+			\item Non-aggregated solving speed: seconds taken to solve each problem (e2-word-*)
+			\item Idea generation rate: how many attempts (including false ones) are taken within the time limit on average (e2-idea-rate)
+			\item Success rate: Number of problems solved successfully (e2-correct-guesses)
+			\item Frustration/Negative-attention: Amount of false choices after \textit{Hint Word} suggestion appears as ratio to Hint Word suggestion answers. (e2-neg-attention-ratio)
+			\item Total points (time left for all words, e2-total-points)
 		\end{enumerate}
 	
-		\toDo{elaborate about the measures and reasoning behind them}
-
+		The e2 performance variables are calculated and attributed to the participant object to be used during the analysis phase.
+		
+%		\toDo{elaborate about the measures and reasoning behind them}
 
 	\subsection{Means of emotional self-evaluation} \label{sec:selfeval}
 	
-	\input{means-of-self-evaluation.tex}
+%	\input{means-of-self-evaluation.tex}
 	
 	\toDo{Describe Valence and Arousal evaluation methods}  \cite{Harley2016}
 	
@@ -684,14 +688,12 @@ Learning Modules submit task-emotion fit data to the emotion control layer when 
 
 	\paragraph{Age}
 	
-	
-	
+	Each Participant stated their age group. Across all participants the distribution is as follows: Group 18 - 24: \textbf{11};
+	Group 25 - 29: \textbf{34}; Group 30 - 34: \textbf{28}; Group 35 - 44: \textbf{20}; and finally group 45 and above with \textbf{12} participants.	
 
 	\paragraph{Distribution by english knowledge} 
 	
-%	\toDo{Describe data preparation, how many people participated, demographics data, distributions.}
 	
-%	\toDo{Show general statistical data}
 	
 	\subsection{Data Preparation}
 	
@@ -739,7 +741,7 @@ Learning Modules submit task-emotion fit data to the emotion control layer when 
 	
 	\paragraph{E1 metrics} \label{sec:e1metrics}
 	
-	E1 performance variables are described in section \ref{sec:memory-parameters}. Following consideration is dedicated to choosing the right performance metric and discussion on applicability of others based on received data.
+	E1 performance variables are described in section \ref{sec:memory-parameters}. Following consideration is dedicated to choosing the right objective performance metric and discussion on applicability of others based on received data.
 	
 	Due to differences in the theme versions the delay for after opening a pair before then next card can be clicked is different. 750ms compared to 1200ms. This delay can cause people to wait longer than they want between opening pairs.
 	
@@ -756,34 +758,55 @@ Learning Modules submit task-emotion fit data to the emotion control layer when 
 	Based on these findings the most objective E1 performance metric appears to be \textit{e1-pairs-opened}.
 	\textit{e1-first-miss} might further give insight on the single instance of memory performance at the beginning of the game after 10 seconds of memorization.
 	
-	\paragraph{E2 metrics} 
-	Event based data structure allows to extract several E2 metrics that describe a participants behavior.
+	\paragraph{E2 metrics}
 	
-	e2 avg time/word 
-	 e2 time left [word.*]  
-	  e2 idea rate 
-	   e2 correct guesses
-	e2 sum bad hint-clicks 
-	 e2 neg attention ratio
+	E2 performance variables are described in section \ref{sec:creativity-parameters}. Following consideration is dedicated to choosing the right objective performance metric.
 	
-	\toDo{discuss applicability of E2 metrics}
+	Event based data structure allows to extract a series of E2 metrics that describe a participants behavior:
+	\begin{itemize*}
+		\item e2 avg-time 
+		\item e2 time left [word.*]  
+		\item e2 idea rate 
+		\item e2 correct guesses
+		\item e2 sum bad hint-clicks 
+		\item e2 neg attention ratio
+		\item e2 total points
+	\end{itemize*}
+	
+	Unlike the first experiment, creativity experiment has no timing differences across theme versions and can therefore include time-based metrics as a measure of performance for comparison across versions.
+	
+	The primary measure of participant's \textit{creativity performance} can be most objectively defined by the sum of time left to solve a word at the moment of solving it (described by \textit{e2-total-points}). For example, solving a word-set within 10 seconds will result in a 20 point gain (30 seconds available - 10 seconds used). The sum of all words results in a continuous variable with the minimum of 0 (word is not solved) and a maximum of 30 (word is solved instantly) points per word. The measure has an advantage over a simpler \textit{e2-correct-guesses} due to its granularity. Participants who guessed the word quicker would be ranked higher than the ones who took longer, even when the amount of words guessed is equal. Additionally, due to the way the time left is calculated, typing speed is irrelevant and does not influence the points total.
+	
+	Consequently, E2 performance measure for current analysis is \textit{e2-total-points}.
+%		\textit{e1-first-miss} might further give insight on the single instance of memory performance at the beginning of the game after 10 seconds of memorization.
 	
 	
 	
 	\subsection{Validation of assumptions} \label{sec:data-validity}
 	
-		\subsubsection{Native speakers} 
+		\subsubsection{Native speakers} \label{sec:data-validity-native}
+		
+		During testing some feedback from participants included the difficulty of the creativity task (E2). Mostly this feedback has been from participants, who are non-native English speakers. This warrants a deeper look into data to see whether \textit{native} influences \textit{e2-total-points}. The null-hypothesis states:
+				 
 		\textbf{H\textsubscript{0}:}  Native speakers (Question 3) do not score differently on the creativity task due to cultural influence 
 		
-		\toDo{TODO}
+		The difference between groups is assessed with a t-test run on 40 non-native speakers and 62 native speakers. A Welch t-test is run due to the assumption of homogeneity of variances being violated, as assessed by Levene's test for equality of variances (p = .003).
+		Inspection of the box-plots indicates no outliers in the data. 
+		\textit{e2-total-points} values are normally distributed for \textit{native} = 1 (p = .123), but not for \textit{native} = 0 (p = .029), as assessed by Shapiro-Wilk's test. 
+		Native speakers score higher on the E2 test (M = 348.653, SD = 78.23732) compared to non-native speakers (M = 157.391, SD = 110.60). The difference is statistically significant with M = -191.26, 95\% CI [-231.44, -151.08], t(63.982) = -9.509, p < .001.
+		
+		I reject the null hypothesis of equality of means for native and non-native speakers. This result is considered later during the analysis.
 		
 		\subsubsection{Female participant reaction to "happy" preconditioning}
 		
-		Laboratory tests with female participants provided feedback, that "happy" preconditioning which contains some sexually suggestive images or a female body, does not yield a positive effect on valence. Following analysis provides a check whether female reactions to these images is significantly different from males. The test can be conducted on the \textit{valence-pre} variable or, alternatively, on the delta of valence-preprecond and valence-pre, which I name \textit{valence-delta-1}
+		Laboratory tests with female participants provided feedback, that "happy" preconditioning which contains some sexually suggestive images or a female body, does not yield a positive effect on valence. Following analysis provides a check whether female reactions to these images is significantly different from males. The test can be conducted on the \textit{valence-pre} variable or, alternatively, on the delta of \textit{valence-preprecond} and \textit{valence-pre}, which I name \textit{valence-delta-1}. The null hypothesis is as follows:
 		 
-		\textbf{H\textsubscript{0}:} Female reaction to Q2 Preconditioning is not different than male
+		\textbf{H\textsubscript{0}:} Female reaction to Q2 preconditioning is not different than male.
 		
-		\toDo{TODO}
+		A Mann-Whitney U test is run to assess whether there are differences in reaction between males and females. The sample is limited to participants receiving preconditioning "happy" (Preconditioning = 1; Sample size (N) = 32; Female = 12; Male = 20). Distributions of the \textit{valence-delta-1} values are similar for both groups, as assessed by visual inspection of the frequency graphs. Median valence deltas for males(0.0) and females (0.0) are not statistically significantly different with U = 144.00; z = 0.979; p = 0.366; using an exact sampling distribution for U \cite{Dinneen1973}.
+		
+		This suggests, that female participant feedback did not represent just females but is indicative of the general effect of Q2 preconditioning on affect, although they were more vocal at communicating it. Q2 preconditioning has not caused a uniformly positive response as desired, with both genders ranging from slight to moderately negative as well as positive reactions. 
+		Reasons for this are not in scope of current study. % TODO: can i write this?
 		
 		\subsubsection{Preconditioning effectiveness}
 		
@@ -938,7 +961,7 @@ Learning Modules submit task-emotion fit data to the emotion control layer when 
 	
 	No statistically significant difference of affect could be found for valence values across all groups. There is a statistically significant mean difference of arousal between theme versions for high performers of E2 when they are in angry or happy state (high arousal), whereas theme0 kept higher arousal for participants. Theme0 lowered the arousal values.
 	
-	\paragraph{Limitations} According to \cite{Russell2003} each persons average of affect values can vary. After an emotional episode each participant's emotions are bound to converge back to their default values with time. This process is not generalizable and should be accounted on a personal basis with further research. Due to current study design analysis is done with the assumption that each participants emotions behave in a similar way, despite evidence laid out in \cite{Russell2003}.
+	\paragraph{Limitations} According to \cite{Russell2003} each persons average of affect values can vary. After an emotional episode each participant's emotions are bound to converge back to their default values with time. This process is not generalizable and should be accounted on a personal basis with further research. Due to current study design analysis is done with the assumption that each participants emotions behave in a similar way, despite evidence laid out by Russell.
 	
 
 %	- 1. compute delta of arousal and valence
@@ -949,8 +972,17 @@ Learning Modules submit task-emotion fit data to the emotion control layer when 
 %	
 %	- convert to categorical variable
 
+	\subsubsection{Hypothesis 2: Introduction}
+
+	With the Hypothesis 2 I analyze whether theme version has any effect on performance during experiment. Regardless, that no differences in the affect levels could be asserted with theme 1 compared to theme 0, it can be beneficial to check hypothesis 2 to uncover other potential effects on performance, perhaps caused on the subconscious level.
+	
+	Assertions made in hypothesis 2 can be separated in two parts, as the study design provides two types of separate experiments: memory and creativity. The following sections deal with each experiment separately.
 
 	\subsubsection{Hypothesis 2: E1 Memory} \label{section:h2e1}
+	
+		I analyze whether theme version has any effect on performance during experiment 1 - Memory task.
+		
+		The null hypothesis \textbf{H$_{0}$:} Performance of participants on memory task, as measured by \textit{e1-pairs-opened}, is equal using theme 1 compared to using theme 0.
 	
 		\paragraph{Cleaning data} %\label{section:h2e1-cleaning}
 		
@@ -1013,7 +1045,7 @@ Learning Modules submit task-emotion fit data to the emotion control layer when 
 			\label{tbl:distribution}
 		\end{table}
 		
-		\paragraph{Preparation: Gender differences for E1} \label{sec:gender-differences-E1}
+		\paragraph{Preparation: Gender differences for E1}
 		
 		In a 1997 paper \cite{McBurney1997} suggests that some differences may be observed in the way male and female memory works.
 		
@@ -1064,12 +1096,12 @@ Learning Modules submit task-emotion fit data to the emotion control layer when 
 		There is homogeneity of variances, as assessed by Levene's test for equality of variances, $ p = 0.449 $.
 		
 		No statistically significant interaction is found for the two variables with outliers present: 
-		\[ F(3, 90) = 0.354, p = .787, \eta_{p}^{2} = .012 \]
+		$ F(3, 90) = 0.354, p = .787, \eta_{p}^{2} = .012 $.
+		
 		Followup analysis of main effects shows no statistically significant difference in E1 performance based on theme version ($ F(1, 90) = 0.011, p = .917, \eta_{p}^{2} = 0.00012. $), further it shows no statistically significant difference in E1 performance based on affect quadrant (defined by value of \textit{quadrant-pre}), ($ F(3, 90) = 0.374, p = .772, \eta_{p}^{2} = 0.012 $).
 		
 		%-------
-		
-		For the analysis \textbf{with outliers removed}, normality assumptions are not violated for the residuals (on a confidence level of p < 0.05) as per Shapiro-Wilk test. There is observed homogeneity of variances, $ p = 0.130 $. Interaction effects are not significant. No followup analyses are done in this sub-test, as they are expected to yield comparable results.
+		For the analysis \textbf{with outliers removed}, normality assumptions are not violated for the residuals (on a confidence level of p < 0.05) as per Shapiro-Wilk test. There is an observed homogeneity of variances, $ p = 0.130 $. Interaction effects are not significant, as assessed by two-way ANOVA. No followup analyses are done in this sub-test, as they are expected to yield comparable results.
 
 		\begin{table}[]
 			\centering
@@ -1090,14 +1122,26 @@ Learning Modules submit task-emotion fit data to the emotion control layer when 
 			\label{tbl:group-sized-quadrant-theme-version}
 		\end{table}
 		
-		Results of the analyses show that there are no statistically significant differences across groups of affect or theme versions for experiment 1. With collected data it cannot be determined whether observed outliers are due to people abusing the test or due to other reasons. Therefore, it is not safe to just remove them, as they are believed to represent the population. Moreover, without them, the significance of the test improves only marginally, with no significant differences shown. A bigger sample is advised as some groups contain as little as six observations (see Table \ref{tbl:group-sized-quadrant-theme-version}). Differences, if any, are expected to be in lower percentage levels and therefore a larger sample is advised for any significant result to manifest itself.
+		Results of the analyses show that there are no statistically significant differences across groups of affect or theme versions for experiment 1. With collected information it cannot be determined whether observed outliers are due to people abusing the test or due to other reasons. Therefore, it is not considered safe to simply remove them, as they are believed to represent the population. Moreover, without them, the significance of the test improves only marginally, with no significant differences shown. A bigger sample is advised as some groups contain as little as six observations (see Table \ref{tbl:group-sized-quadrant-theme-version}). Differences, if any, are expected to be in lower percentage values and therefore a larger sample is advised for any significant result to manifest itself.
 		
 %		FR: Futher research: laboratory testing, more defined group of people, no above 45 people. Both genders can be tested, as there is not believed to be any effect of gender, although should be investigated in future research when applied.
 
 	
 	\subsubsection{Hypothesis 2: E2 Creativity}
 	
-	\paragraph{Data selection}
+	I analyze whether theme version has any effect on performance during experiment 2 - Creativity task.
+	
+	The null hypothesis \textbf{H$_{0}$:} Performance of participants on creativity task, as measured by \textit{e2-total-points}, is equal using theme 1 compared to using theme 0.
+	
+	\paragraph{Cleaning data}
+	
+	Question 4 - proficiency.
+	
+	\paragraph{Preparation: Gender differences for E2}
+	
+	Similar to the test conducted for E1, I assess whether gender has an effect on creativity task (E2) performance to control for a mediating effect of this variable.
+	
+	Shapiro-Wilk test of normality rejects the null hypothesis of normal distribution.
 	
 	\paragraph{Analysis}
 	
