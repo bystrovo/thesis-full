@@ -783,19 +783,6 @@ Learning Modules submit task-emotion fit data to the emotion control layer when 
 	
 	
 	\subsection{Validation of assumptions} \label{sec:data-validity}
-	
-		\subsubsection{Native speakers} \label{sec:data-validity-native}
-		
-		During testing some feedback from participants included the difficulty of the creativity task (E2). Mostly this feedback has been from participants, who are non-native English speakers. This warrants a deeper look into data to see whether \textit{native} influences \textit{e2-total-points}. The null-hypothesis states:
-				 
-		\textbf{H\textsubscript{0}:}  Native speakers (Question 3) do not score differently on the creativity task due to cultural influence 
-		
-		The difference between groups is assessed with a t-test run on 40 non-native speakers and 62 native speakers. A Welch t-test is run due to the assumption of homogeneity of variances being violated, as assessed by Levene's test for equality of variances (p = .003).
-		Inspection of the box-plots indicates no outliers in the data. 
-		\textit{e2-total-points} values are normally distributed for \textit{native} = 1 (p = .123), but not for \textit{native} = 0 (p = .029), as assessed by Shapiro-Wilk's test. 
-		Native speakers score higher on the E2 test (M = 348.653, SD = 78.23732) compared to non-native speakers (M = 157.391, SD = 110.60). The difference is statistically significant with M = -191.26, 95\% CI [-231.44, -151.08], t(63.982) = -9.509, p < .001.
-		
-		I reject the null hypothesis of equality of means for native and non-native speakers. This result is considered later during the analysis.
 		
 		\subsubsection{Female participant reaction to "happy" preconditioning}
 		
@@ -831,6 +818,19 @@ Learning Modules submit task-emotion fit data to the emotion control layer when 
 	\caption{Affect quadrant by preconditioning group and gender}
 	\label{fig:preconditioningsuccessbygender}
 \end{figure}
+
+		\subsubsection{Native speakers and E2 - creativity task} \label{sec:data-validity-native}
+		
+		During testing some feedback from participants included the difficulty of the creativity task (E2). Mostly this feedback has been from participants, who are non-native English speakers. This warrants a deeper look into data to see whether \textit{native} influences \textit{e2-total-points}. The null-hypothesis states:
+		
+		\textbf{H\textsubscript{0}:}  Native speakers (Question 3) do not score differently on the creativity task due to cultural influence 
+		
+		The difference between groups is assessed with a t-test run on 40 non-native speakers and 62 native speakers. A Welch t-test is run due to the assumption of homogeneity of variances being violated, as assessed by Levene's test for equality of variances (p = .003).
+		Inspection of the box-plots indicates no outliers in the data. 
+		\textit{e2-total-points} values are normally distributed for \textit{native} = 1 (p = .123), but not for \textit{native} = 0 (p = .029), as assessed by Shapiro-Wilk's test. 
+		Native speakers score higher on the E2 test (M = 348.653, SD = 78.23732) compared to non-native speakers (M = 157.391, SD = 110.60). The difference is statistically significant with M = -191.26, 95\% CI [-231.44, -151.08], t(63.982) = -9.509, p < .001.
+		
+		I reject the null hypothesis of equality of means for native and non-native speakers. Native speakers score higher on the E2 test. This result is considered later during the analysis.
 
 
 	\subsection{Analysis}
@@ -1051,19 +1051,19 @@ Learning Modules submit task-emotion fit data to the emotion control layer when 
 		
 		As I have unbalanced design with more male participants than female (see table \ref{tbl:distribution}), I assess whether women and men have significantly different memory test scores as measured by \textit{e1-pairs-opened}, and whether this can lead to a mediating effect on the performance across quadrants.
 		
-		Shapiro-Wilk test of normality rejects the null hypothesis of normal distribution. For this analysis I use the non-parametric Mann-Whitney U test, due to not normal distribution. Distributions of the scores for \textit{e1-pairs-opened} are similar for males and females, as assessed by visual inspection (both positively skewed). Median performance on the E1 task is not statistically significantly different between males (48.0) and females (49.0), $ U = 1099.500, z = -0.296, p = 0.768 $. Table \ref{tbl:e1e2means} shows median and mean values for \textit{e1-pairs-opened} across genders.
+		Shapiro-Wilk test of normality rejects the null hypothesis of normal distribution. For this analysis I use the non-parametric Mann-Whitney U test, due to not normal distribution. Distributions of the scores for \textit{e1-pairs-opened} are similar for males and females, as assessed by visual inspection (both positively skewed). Median performance on the E1 task is not statistically significantly different between males (48.0) and females (49.0), $ U = 1099.500, z = -0.296, p = 0.768 $. Table \ref{tbl:e1means} shows median and mean values for \textit{e1-pairs-opened} across genders.
 		
 		\begin{table}[]
 			\centering
-			\begin{tabular}{l|l|l|l|l}
-				Gender & \multicolumn{2}{l}{Median} & \multicolumn{2}{l}{Mean}       \\ \hline
-				& e1-pairs-opened & e2-total-points & e1-pairs-opened & e2-total-points		\\ \hline
-				female & 49.00             & 283.9820 & 50.18             & 274.6812      \\
-				male   & 48.00             & 297.9740 & 49.80             & 268.9467       \\ \hline
-				Total  & 48.00             & 293.2215 & 49.95             & 271.1703      \\ \hline \hline
+			\begin{tabular}{l|l|l}
+				Gender & Median & Mean       \\ \hline
+				& e1-pairs-opened  & e1-pairs-opened		\\ \hline
+				female & 49.00              & 50.18                 	 \\
+				male   & 48.00              & 49.80                   	 \\ \hline
+				Total  & 48.00              & 49.95                  	 \\ \hline \hline
 			\end{tabular}
-			\caption{Mean and Median values per gender for E1 and E2 metrics}
-			\label{tbl:e1e2means}
+			\caption{Mean and Median values per gender for E1 metrics}
+			\label{tbl:e1means}
 		\end{table}
 	
 		As the test shows, that men and women do not have a difference in performance on the E1 task, I exclude this variable from further analysis as a mediating parameter.
@@ -1135,13 +1135,41 @@ Learning Modules submit task-emotion fit data to the emotion control layer when 
 	
 	\paragraph{Cleaning data}
 	
-	Question 4 - proficiency.
+%	Question 4 - proficiency. 
+	
+	Closer look at data shows that seven (7) participants assigned themselves to \textit{englishlevel} = 'Intermediate', all of whom are non-native speakers. Their mean \textit{e2-total-points} scores are also much lower as compared to native speakers. Level of English seems to correlate strongly with performance on the creativity task, regardless of native language. Figure \ref{tbl:stat-e2-total-points-by-lang} shows mean, std. error and median values per language group. As the question is asked right after completing the experiment, this measure can be subjective.
+	
+	\begin{table}[]
+		\centering
+		\begin{tabular}{ll|lll}
+			\multicolumn{5}{l}{e2\_total\_points}                   \\ \hline
+			native & englishlevel & Mean     & Std. Error & Median  \\ \hline
+			0      & Intermed     & 84,7933  & 17,04154   & 71,252  \\
+			& Advanced     & 140,259  & 21,20049   & 116,014 \\
+			& Fluent       & 249,4089 & 38,45863   & 265,451 \\ \hline
+			1      & Advanced     & 156,0835 & 81,6526    & 141,689 \\
+			& Fluent       & 349,2958 & 10,21268   & 363,631 \\ \hline \hline
+		\end{tabular}
+		\caption{Descriptive Statistics for \textit{e2-total-points} by \textit{native} and \textit{englishlevel}}
+		\label{tbl:stat-e2-total-points-by-lang}
+	\end{table}
+
+	Following analysis removes non-native users from consideration. As assessed in \ref{sec:data-validity-native}, only native speakers are expected to objectively show creativity differences without language skills being a mediating variable.
+
+%	remove 7 people with intermediate skill, retain one person with beginner (deal as wrong entry)
 	
 	\paragraph{Preparation: Gender differences for E2}
 	
-	Similar to the test conducted for E1, I assess whether gender has an effect on creativity task (E2) performance to control for a mediating effect of this variable.
+	Similar to the test conducted for E1, I assess whether \textit{gender} has an effect on creativity task (E2) performance to control for a mediating effect of this variable.
 	
-	Shapiro-Wilk test of normality rejects the null hypothesis of normal distribution.
+	Data for both native and non-native is included in this test.
+	Shapiro-Wilk test of normality rejects the null hypothesis of normal distribution. 
+	Mann-Whitney U test is used to compare the groups of males and females. 
+	Distributions of the values for \textit{e2-total-points} are similar for males and females, as assessed by visual inspection (both negatively skewed). 
+	Median performance on the E2 task is not statistically significantly different between males (297.97) and females (296.39), $ U = 1194.500, z = -0.312, p = 0.755 $. 
+%	Table \ref{tbl:e1means} shows median and mean values for \textit{e1-pairs-opened} across genders.
+	
+	As the test shows, that men and women do not have a difference in performance on the E2 task, I exclude this variable from further analysis as a mediating parameter for experiment 2.
 	
 	\paragraph{Analysis}
 	
@@ -1149,9 +1177,70 @@ Learning Modules submit task-emotion fit data to the emotion control layer when 
 	
 	\textbf{H$_{0}$:} Performance of participants on memory task, as measured by \textit{e2-total-points}, is equal using interface 1 compared to using interface 0.
 	
-	A two-way ANOVA is performed on the \textit{e2-total-points}
+	With the outliers removed during data cleaning step, variable \textit{e2-total-points} is factored by \textit{theme-version}. The analysis is conducted over 62 participants with 33 using theme0 and 29 using theme1.
+	Shapiro-Wilk test of normality performed on the factored performance variable retains the null hypothesis of normal distribution for theme0 (p = 0.785) and rejects it for theme1 (p = 0.039).
+	One outlier is present for theme1 group with low performance (the participant has the highest amount of attempted guesses over the whole data-set, but only 7 out of 20 are correct).
+	Due to the presence of an outlier, as well as non-normality of data Mann-Whitney U test is performed on \textit{e2-total-points} with the factor variable \textit{theme-version}. Distributions of the variable are similar for theme0 and theme1, as assessed by visual inspection (see Figure \ref{fig:h2e2-mannwhitneyu}). Median amount of pairs opened for theme0 (340.96) and theme1 (380.51) are not statistically significantly different, U = 526,0, z = 1.658, p = 0.097.
 	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.8\linewidth]{graphics/H2E2-MannWhitneyU}
+		\caption{Frequency graph of \textit{e2-total-points} by theme version for Mann-Whitney U (Hypothesis 2, Experiment 2)}
+		\label{fig:h2e2-mannwhitneyu}
+	\end{figure}
 	
+	An additional \textbf{two-way ANOVA} is performed to assess whether there is an interaction effect between \textit{quadrant-pre} and \textit{theme-version}, with \textit{e2-total-points} as dependent variable. Three outliers are present in the theme-version = 0, quadrant-pre = 3 group, in both high and low values, as assessed by inspection of the box-plot of the residuals. Other groups (7 groups) do not exhibit outliers. 
+	
+	\begin{table}[]
+		\centering
+		\begin{tabular}{ll|lll}
+			\multicolumn{5}{l}{Dependent Variable:   e2-total-points}    \\
+			theme-version & quadrant-pre & Mean     & Std. Deviation 			& N  \\ \hline
+				0            & 1.00         & 383.1705 		& 41.53456       	& 4  \\
+							& 2.00           & 336.8931 	& 60.08613       & 11 \\
+							& 3.00           & 322.5621 	& 89.86881       & 9  \\
+							& 4.00           & 328.2643 	& 99.16147       & 9  \\
+							& Total          & 336.2407 	& 78.18744       & 33 \\ \hline
+				1            & 1.00           & 366.1372 	& 60.54870       	& 6  \\
+							& 2.00           & 388.2117 	& 55.41130       & 6  \\
+							& 3.00           & 297.0977 	& 108.61095      & 7  \\
+							& 4.00           & 391.4778 	& 47.19609       & 10 \\
+							& Total          & 362.7778 	& 77.20360       & 29 \\ \hline
+			Total        	& 1.00         	& 372.9505		 & 51.85708       	& 10 \\
+							& 2.00           & 355.0055 	& 62.08867       & 17 \\
+							& 3.00           & 311.4214 	& 95.89664       & 16 \\
+							& 4.00           & 361.5346 	& 80.84257       & 19 \\
+							& Total          & 348.6532 	& 78.23732       & 62
+		\end{tabular}
+		\caption{Descriptives for \textit{e2-total-points}}
+		\label{tbl:h2e2-descriptives}
+	\end{table}
+
+	For the analysis \textbf{with outliers present}, all groups are normally distributed as per Shapiro-Wilk test (p > 0.05), The assumption of homogeneity of variances is violated, as assessed by Levene's test for equality of variances, p = .042. Transformation (squared transformation) of the variable \textit{e2-total-points} helps achieve homogeneity (p = 0.157), with the drawback of causing more outliers in the residual groups. Transformation is omitted in favor of preserving less outliers.
+	
+	No statistically significant interaction is found for the two variables with outliers present: $ F (3, 54) = 1.389, p = .256, \eta_{p}^{2} = .072 $.
+	
+	Followup analysis of main effects shows 
+	no statistically significant difference in E2 performance based on theme version ($ F(1, 54) = 0.796, p = .376, \eta_{p}^{2} = 0.015 $), additionally it shows no statistically significant difference in E2 performance based on affect quadrant (defined by value of \textit{quadrant-pre}), ($ F(3, 54) = 2.07, p = .115, \eta_{p}^{2} = 0.103 $).
+	
+	For the analysis \textbf{with outliers removed},
+	normality assumptions are not violated for the residuals (on a confidence level of p < 0.05) as per Shapiro-Wilk test. Homogeneity of variances is violated at $ p = 0.003 $. Interaction effects are not significant, as assessed by two-way ANOVA at $ p = 0.310 $. 
+	%No followup analyses are done in this sub-test, as they are expected to yield comparable results.
+	
+	Followup analysis of main effects shows again
+	no statistically significant difference in E2 performance based on theme version ($ F(1, 51) = 1.259, p = .267, \eta_{p}^{2} = 0.024 $), additionally it shows no statistically significant difference in E2 performance based on affect quadrant (defined by value of \textit{quadrant-pre}), ($ F(3, 51) = 2.642, p = .059, \eta_{p}^{2} = 0.134 $).
+	
+	While the effect of affect quadrant during creativity test performance is close to a significant result, it must be highlighted that the number of observations in this test was particularly low (see table \ref{tbl:h2e2-descriptives}). Had the result been significant it would suggest a lower performance for Q3 - sad, compared to all other quadrants.
+	
+	% Pairwise comparisons
+	%\begin{figure}
+	%	\centering
+	%	\includegraphics[width=0.7\linewidth]{graphics/pairwise-for-h2e2}
+	%	\caption{}
+	%	\label{fig:pairwise-for-h2e2}
+	%\end{figure}
+	
+	Unfortunately at this sample size, as displayed in Table \ref{tbl:h2e2-descriptives} no statistically valid result can be concluded, and even though data shows some hints that are in line with past research and my assumptions before the study, statistical test assumptions during this analysis have been violated and any result should be taken with caution. Considerations for further research in regards to this hypothesis are discussed later in section \ref{sec:further-research}.
 	
 \section{Conclusions and Discussion}
 
@@ -1196,7 +1285,7 @@ Learning Modules submit task-emotion fit data to the emotion control layer when 
 	
 	
 
-\section{Further research and implications of the study} \label{sec:further-research}
+\section{Further research} \label{sec:further-research}
 
 - add dominance to model
 
@@ -1208,7 +1297,19 @@ Learning Modules submit task-emotion fit data to the emotion control layer when 
 
 - explore stronger design features that resemble real interface.
 
-\subsection{Ethical, legal and social implications}
+\subsection{Improving E2 Creativity test design}
+
+During current study I has been uncovered that there is a lacking degree of applicability of the Remote Associates Test on non-native speakers. As such, future research should control for native speakers only in the study design. Additionally there is a variability of creative thinking per person, whereas some participants might show higher scores than others with the same preconditioning and affect values. A within-subject design can be considered to control for variation of intrinsic characteristics of a person. Such design can be limited since, remote associate problems can be solved only once (being know to the participant later) and they are not readily comparable among each other to be able to mix different RAT-sets between studies. Alternatively, a large enough sample size could reduce this effect, at which point one could imply a random distribution of creative ability at each group.
+
+\subsection{Reducing scope}
+
+One difficulty that has been a recurring problem in this study is the large amount of groups and variables, both accounted for and unaccounted for (out of scope), these variables create a fragmentation of data, leaving each group with only few participants. At this point the study becomes much less reliable. Differences between groups can sometimes be minimal and can be obfuscated behind regular variances between study subjects. For this type of study a much higher sample size is needed.
+
+\subsection{Effect of preconditioning}
+
+Nowadays people are exposed to emotional stimuli often. Both strong and otherwise. This can lead to certain stimuli losing their effectiveness. For example a person regularly exposed to a stimuli on their daily life would not react to it as strongly as someone experiencing it for the first time. When choosing participant groups more focus can be provided to having a uniform background among them, thereby controlling for the aforementioned effects.
+
+\section{Ethical, legal and social implications}
 
 [TODO]
 
