@@ -366,7 +366,8 @@ To facilitate the study I make assumptions about the medium in which e-learning 
 		
 		After ten seconds all images turn and the user sees the back-face of the cards in their respective design depending on the theme version.
 		
-		No practice run is provided in the memory experiment, as it is assumed that the interface and the mechanics of the game are readily familiar to the user \toDo{come back to this assumption in data discovery part}
+		No practice run is provided in the memory experiment, as it is assumed that the interface and the mechanics of the game are readily familiar to the user 
+%		\toDo{come back to this assumption in data discovery part}
 		
 		\paragraph{Activity logging}
 		
@@ -541,7 +542,7 @@ To facilitate the study I make assumptions about the medium in which e-learning 
 	
 	Native speakers (Question 3) might potentially score higher on the creativity task due to cultural influence of using colloquial expressions. This assumption is challenged during data analysis in section \ref{sec:data-validity}
 	
-	(Question 4) is used to validate the requirement of at least an "advanced" proficiency in English. Participant choosing anything lower could suggest either invalid data or problems with the creativity task due to language issues. In this case participant is considered for removal. \todo{evaluate this claim}
+	(Question 4) is used to validate the requirement of at least an "advanced" proficiency in English. Participant choosing anything lower could suggest either invalid data or problems with the creativity task due to language issues. In this case participant can be considered for removal.
 	
 	Occupation is inquired for additional context into the participant.
 	
@@ -562,7 +563,7 @@ To facilitate the study I make assumptions about the medium in which e-learning 
 		\item context information such as global system state and dependent values of current active screen
 	\end{itemize}
 
-	Finally, for system actions (events) \textbf{name of event} is provided. For user actions (clicks) a target of the click is provided.
+	Finally, for system actions (events) an \textbf{event name} is provided. For user actions (clicks) a \textbf{click target} is provided.
 	
 	%A session is defined on the scope of single e-learning module and contains user metadata as well as emotional state of the learner.
 
@@ -571,32 +572,36 @@ To facilitate the study I make assumptions about the medium in which e-learning 
 		
 		\paragraph{Technical implementation}
 		
-		Upon requesting the page a user-token is generated and assigned to each participant. This token is saved as a cookie for future reference and visitor matching. Only one successful experiment is allowed per participant due to 
+		Upon requesting the page a user-token is generated and assigned to each participant. 
+		This token is saved as a cookie for future reference and visitor matching. 
+		Only one successful experiment is allowed per participant, as any subsequent run will introduce bias.
 		Each experiment further contains a session object with its attributes. 
 		
-		"[location]\_[action]\_[result]"
+%		\toDo{[TODO:] describe how tracking is implemented, storage and analysis for current study}
 		
-		\toDo{[TODO:] describe how tracking is implemented, storage and analysis for current study}
-		
-		Action tracking is managed by a dedicated module that communicates with the database storage API. Each event sent to the Database is complemented with a timestamp and user data. An action object with usual fields is described in listing \ref{lst:db_object}
-
+		Action tracking is managed by a dedicated module that communicates with the database storage API. Each event sent to the database is complemented with a timestamp and user data. An event/click object with usual fields is described in listing \ref{lst:db_object}. Additional fields are available on an object depending on its type.
 
 	\begin{listing}[h]
-		\begin{minted}{json}
-			{
-			"first": "second1"
-			}
+		\begin{minted}{javascript}
+	{
+		"type": "event" || "click"
+		"context" : { page, preconditioning, theme },
+		"userID": "X",
+		"sessionsID": "Y",
+		"name": "[location]_[action]_[result]"
+		"description": "[clear text description of event]"
+		...
+	}
 		\end{minted}
 		\caption{Database Object Fields}
 		\label{lst:db_object}
 	\end{listing}
 
-\toDo{specify object}
-
+		Participant's actions are recorded in a time series enabling a wide array of possibilities for post-hoc transformations.
 		
-		\paragraph{xAPI adaptation} - 
+%		\paragraph{xAPI adaptation} - 
 		
-		\toDo{[Optional:] explore adaptability and possible constraints}
+%		\toDo{[Optional:] explore adaptability and possible constraints}
 
 \section{Study implementation}
 
@@ -691,7 +696,7 @@ Learning Modules submit task-emotion fit data to the emotion control layer when 
 	Each Participant stated their age group. Across all participants the distribution is as follows: Group 18 - 24: \textbf{11};
 	Group 25 - 29: \textbf{34}; Group 30 - 34: \textbf{28}; Group 35 - 44: \textbf{20}; and finally group 45 and above with \textbf{12} participants.	
 
-	\paragraph{Distribution by english knowledge} 
+%	\paragraph{Distribution by english knowledge} 
 	
 	
 	
