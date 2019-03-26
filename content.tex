@@ -502,16 +502,20 @@ To facilitate the study I make assumptions about the medium in which e-learning 
 		
 %		\toDo{elaborate about the measures and reasoning behind them}
 
-	\subsection{Means of emotional self-evaluation} \label{sec:selfeval}
+	\subsection{Means of emotional evaluation} \label{sec:selfeval}
 %	\input{means-of-self-evaluation.tex}
-	\toDo{Describe Valence and Arousal evaluation methods}  \cite{Harley2016}
+
+
 	
-	SAM , AS, Affect Grid \cite{Russell1989} (the same guy who created the circumplex model 9 years prior), 
-	AffectButton \cite{Broekens}
+	A range of methods exist for evaluating emotional affect levels. The tests are usually bound to an underlying emotional model. They can be explicit - questions measure the dimension directly, implicit - questions abstract the dimensions away from the participant with the help of labels, and sensor-based - the affect is derived from physiological sensor data, without additional action from the study participants.
 	
-	A positive Affect Scale (PAS) from the Positive and Negative Affect Schedule (PANAS; \cite{Watson1988}).
+	The values for the \textit{circumplex model of affect} with two axes can be explicitly extracted by the Self-Assessment Manikin \cite{Bradley1994}, where each scale is represented by a human-like drawing. Adaptations on this method include the Affective Slider \cite{Betella2016}, The Affect Button \cite{Broekens2009}, both of which reintroduce the same principle with the modern input trends in mind; the Affect Grid \cite{Russell1989} - proposed by Russell, who developed the model of affect nine years prior.
 	
-	Due to effort constraints of the participants it is important to achieve a intuitive, quick, yet accurate reading of their emotions. In the context of this study self-evaluation is a means to validate results, of Hypothesis 1. I rely on the SAM (Self-Assessment Manikin) method \cite{Bradley1994} to quickly allow users to assess their emotions on a dual 9 point scale. Figure \ref{fig:sam} illustrates the structure of the self-assessment screen.
+%	 SAM, Affective slider, 
+
+	A positive Affect Scale (PAS) from the Positive and Negative Affect Schedule (PANAS; \cite{Watson1988}), is an example of an implicit questionnaire which then maps to affect scaled. PAS is not based on the dimensions that Russell's Circumplex Model proposes.
+	
+	Due to participants having to state their affect levels several times, current study requires the method to be straightforward, intuitive and quick to complete, while providing an accurate reading. In the context of this study the self-evaluation is important for the assessment of Hypothesis 1. I rely on the SAM (Self-Assessment Manikin) method \cite{Bradley1994}. Participants assess their emotions on a dual 9 point scale. Figure \ref{fig:sam} illustrates the structure of the self-assessment screen. The proposed modern adaptations are neglected, as those can have usability concerns.
 	
 \begin{figure}[h]
 	\centering
@@ -519,6 +523,8 @@ To facilitate the study I make assumptions about the medium in which e-learning 
 	\caption{Self-Assessment Manikin. Input for valence and arousal values on nine-point scale}
 	\label{fig:sam}
 \end{figure}
+
+%	\toDo{Describe Valence and Arousal evaluation methods}  \cite{Harley2016}
 	
 	\subsection{Demographic data and supplemental information} \label{sec:demographics}
 	
@@ -585,9 +591,9 @@ To facilitate the study I make assumptions about the medium in which e-learning 
 		\begin{minted}{javascript}
 	{
 		"type": "event" || "click"
-		"context" : { page, preconditioning, theme },
-		"userID": "X",
-		"sessionsID": "Y",
+		"context" : { $page, $preconditioning, $theme },
+		"userID": $uniqueID,
+		"sessionsID": $uniqueID + $timestamp,
 		"name": "[location]_[action]_[result]"
 		"description": "[clear text description of event]"
 		...
@@ -736,13 +742,16 @@ Learning Modules submit task-emotion fit data to the emotion control layer when 
 
 	\paragraph{Emotion quadrants}
 	
-	Valence and arousal values are transformed into quadrants with the split in both axes at the value 5:
-	\begin{enumerate*}
+	Valence and arousal values can range from 1 to 9. They are transformed into quadrants with the split in both axes at the value 5:
+	
+	\begin{enumerate}
 		\item Q1 = (arousal >= 5 \& valence  < 5)
 		\item Q2 = (arousal >= 5 \& valence  >= 5)
 		\item Q3 = (arousal < 5 \& valence  < 5)
 		\item Q4 = (arousal < 5 \& valence  >= 5)
-	\end{enumerate*}. Resulting variables are \textit{quadrant-initial}, \textit{quadrant-pre}, \textit{quadrant-post}.
+	\end{enumerate}
+	
+	Resulting variables are \textit{quadrant-initial}, \textit{quadrant-pre}, \textit{quadrant-post}, according to the time of report.
 	
 	\paragraph{E1 metrics} \label{sec:e1metrics}
 	
