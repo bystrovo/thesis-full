@@ -21,7 +21,8 @@
 *.mtc1
 *.out
 *.synctex.gz
-*.pdf
+main*.pdf
+Thesis*.pdf
 
 # minted
 _minted*
