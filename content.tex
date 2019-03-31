@@ -2,12 +2,19 @@
 
 \toDo{[TODO: Intention, hypotheses and results of the study]}
 
+Learning online is a growing trend, as technological advancements allow to create interactive and engaging experiences. E-learning providers are attempting to help learner adopt new skills more effectively and efficiently. Emotion plays a defining role in learner success and ultimately influences motivation, memory and problem solving abilities. This makes emotion research on of the central topics to improve the learning environment. 
 
+Understanding the cause and effect of emotions within this environment can open possibilities for integration of emotional data with real-time sensor devices and, potentially, an adaptive emotionally-aware system.
 
-Ethical, legal and social considerations are also part of my thesis.
+Previous research presents compelling evidence, that modifications to the learning environment can lead to an improvement of learning ability, although most of the studies modify learning content, instead of the surrounding interface.
 
+Current research focuses on the user interface as an emotion provoking element in e-learning and takes cues from the field of emotional design to develop an interface that supports learning. The paper aims to analyze whether improved interface has a positive effect on basic cognitive abilities, such as short term memory and creativity, compared to a basic interface.
 
-Discussion centers on potential practical implications of the present results, as well as on prospects for future research.
+Results show that...
+
+Discussion centers on potential practical implications of the present results, possibilities for future research, and social and ethical considerations that arise from using intervention user interfaces with emotion data.
+
+%Ethical, legal and social considerations are also part of my thesis.
 
 \clearpage
 
@@ -16,11 +23,9 @@ Discussion centers on potential practical implications of the present results, a
 	\subsection{Motivation}
 	
 	\input{motivation.tex}
-	
 		
 	\subsection{Research basis} \label{sec:research}
 	
-
 	Information architecture and display types play an important role in learning comprehension, attention and learning success. \cite{McCrudden2017} describe the effects of different types of visual display on cognitive processing. They highlight the important aspects of visual guidelines, the basics of human understanding and  memory, as well as a way to quantify those under processing efficiency. One of their conclusions is that "displays should be designed to support the selection of important information" \cite[p.633]{McCrudden2017}
 	
 	There is, however, a case to be made with respect to the same visual display that can be put forth in front of participants under differentiating emotional states. There is strong evidence that emotions play a role in information processing and, as a consequence, can have an effect on the resulting performance. Section \ref{sec:emotion-cognition} discusses closer existing research supporting a connection between emotion and cognition.
@@ -1008,7 +1013,7 @@ For the purpose of the study current implementation does not take into account u
 	
 	\paragraph{Data preparation and selection}
 	
-	To see the how arousal and valence change from SAM2 to SAM3 steps I compute 2 additional variables:
+	To see the how arousal and valence change from SAM2 to SAM3 steps I compute two additional variables:
 	
 	\begin{enumerate}
 		\item \textit{arousal-delta-2}: Change of arousal from SAM2 to SAM3
@@ -1023,7 +1028,8 @@ For the purpose of the study current implementation does not take into account u
 	
 	2) Due to the recency effect, participants, when asked to evaluate their affect, can be heavily biased towards evaluation of their enjoyment of the second experiment (creativity test) as the main criterion for rating affect. The bias is evaluated below.
 	
-	\paragraph{Preparation: Relationship between e2-correct-guesses and affect values} 
+	\paragraph{Preparation:} Relationship between e2-correct-guesses and affect values
+	 
 	I assess the relationship between \textit{e2-correct-guesses} with \textit{valence-post} and \textit{arousal-post} respectively. 
 	Visual inspection of a scatter-plot confirms some monotonic relationship for \textit{valence-post}, but not for \textit{arousal-post}.
 	To assess this relationship a correlation test is conducted for \textit{valence-post} and \textit{arousal-post}.
@@ -1039,19 +1045,18 @@ For the purpose of the study current implementation does not take into account u
 	
 %	Several participants with e2-correct-guesses of 0 and 1 are also removed, due to possible general issues with the task. Further, participants with \textit{e1-pairs-opened} lower than 23 and higher than 95 are excluded as invalid. Overall 96 observations are kept as for this analysis.
 	
-	Results (illustrated in Figure \ref{fig:correlatione2-correct-guesses-affect-post} ) show that there is a statistically significant moderately strong positive correlation between \textit{valence-post} and \textit{e2-correct-guesses}, r\textsubscript{s} = .331, p < .001.
-	
+	Results (illustrated in Figure \ref{fig:correlatione2-correct-guesses-affect-post} ) show that there is a statistically significant moderately strong positive correlation between \textit{e2-correct-guesses} and \textit{valence-post}, $ r\textsubscript{s} = .331, p < .001$.
 	No statistically significant correlation is found between \textit{e2-correct-guesses} and \textit{arousal-post}.
 	
-	\paragraph{Preparation: Variance of e2-correct-guesses by theme version}
+	\paragraph{Preparation:} Variance of e2-correct-guesses by theme version
 	
-	Because of the relationship between \textit{valence-post} and \textit{e2-correct-guesses}, an analysis of variance is beneficial for H$_{01}$. If the means between groups are equal then the factor \textit{e2-correct-guesses} will have a uniform impact on both groups of \textit{theme-version} in the subsequent analysis of variance for H$_{01}$ and H$_{02}$.
+	Because of the relationship between \textit{valence-post} and \textit{e2-correct-guesses}, an analysis of variance is beneficial for H$_{01}$. If the means of \textit{e2-correct-guesses} between \textit{theme-version} groups are equal then the factor \textit{e2-correct-guesses} will have a uniform impact on both groups in the subsequent analysis of variance for H$_{01}$ and H$_{02}$.
 	
 	Independent samples t-test is performed on the variable \textit{e2-correct-guesses} with a factor variable \textit{theme-version}, to assess whether there is a difference between means of the variable \textit{e2-correct-guesses} across theme versions. Absence of significant difference allows to move forward with the analysis of variance for H$_{01}$ and H$_{02}$.
 	
 	There are 52 participants with theme0, and 52 with theme1. The values do not show normal distribution per group as assessed by Q-Q Plots observation as well as Shapiro-Wilk test. The split between groups is equal and the skewness of distribution almost equal (-0.63 (SE -0.33) and -0.70 (SE -0.30)). The violation of normality is ignored in this case, as t-test can be considered robust against deviation from normality. The homogeneity of variances is confirmed, as assessed by Levene's test for equality of variances (p = 0.153). The t-test shows that the null hypothesis cannot be rejected and there is no statistically significant mean difference between the two groups (p = .714).
 	
-	For both theme versions the same distribution is observed on \textit{e2-correct-guesses}.
+	For both theme versions the same distribution of \textit{e2-correct-guesses} is observed.
 	
 	
 	\paragraph{H$_{01}$ Analysis of variance of \textit{valence-post} by theme and performance}
@@ -1061,7 +1066,7 @@ For the purpose of the study current implementation does not take into account u
 	\textit{e1-pairs-opened} metric shows only extremely low correlation with both \textit{arousal-post} and \textit{valence-post} values and is excluded from the following analysis. The assumption here is that \textit{e1-pairs-opened} has no effect on affect values. Their perceived performance, if any, is overshadowed by the second task. As discussed earlier perceived performance for E1 task may be uniformly negative among participants as per their own self-evaluation. No question has been asked from participants about their perceived performance or enjoyment of the E1 task in the subsequent questionnaire.
 	
 	Metrics \textit{valence-pre}, and \textit{e2-correct-guesses} are continuous variables and for this test are transformed into categorical.
-	\textit{valence-pre} is transformed into \textit{valence-group-pre} and split according to affect quadrant definition at the value \( V(pre) >= 5 \coloneqq 2; V(pre) < 5 \coloneqq 1\). \textit{e2-correct-guesses} \textit{e2-correct-guesses-grp} is split on the 50th percentile (at the value \(X >= 14 \coloneqq 2, X < 14 \coloneqq 1\))
+	\textit{valence-pre} is transformed into \textit{valence-group-pre} and split according to affect quadrant definition at the value \( V(pre) >= 5 \coloneqq 2; V(pre) < 5 \coloneqq 1\). \textit{e2-correct-guesses-grp} is split on the 50th percentile of \textit{e2-correct-guesses} (at the value \(X >= 14 \coloneqq 2, X < 14 \coloneqq 1\))
 	
 	\begin{itemize}
 		\item \textbf{Dependent:} \textit{valence-post}
@@ -1098,7 +1103,9 @@ For the purpose of the study current implementation does not take into account u
 	
 	The analysis is followed up with simple simple main effects, with respect to: \textit{arousal-group-pre} $ = high $;
 	
-	There is a statistically significant simple simple main effect of \textit{theme-version} for high arousal-group-pre participants (i.e. participants getting the 0 or 1 preconditioning) at high amount of e2-correct-guesses (\textit{e2-correct-guesses-grp} = 2), 
+%	(i.e. participants getting the 0 or 1 preconditioning) - this is not correct
+	
+	There is a statistically significant simple simple main effect of \textit{theme-version} for high arousal-group-pre participants  at high amount of e2-correct-guesses (\textit{e2-correct-guesses-grp} = 2), 
 	$ F(1, 95) = 5.785, p < .018 $), 
 	but no significant effect for high arousal-group-pre participants at low amount of e2-correct-guesses (\textit{e2-correct-guesses-grp} = 1),
 	$ F(1, 95) = 1.683, p = .198 $. 
@@ -1416,6 +1423,16 @@ For the purpose of the study current implementation does not take into account u
 %	\subsection{Hypothesis 2}
 %	[Note:] H2 should be checked for each task separately
 
+	This study examined the relation between visual presentation (theme version) and the self-reported mood of participants (H1) as well as their performance during an experiment for short term memory and creative ability.
+	
+	Valence and arousal were considered separately when assessing the emotional effect of theme on the mood. Theme version had no effect on valence of the participants, although successful completion of the task correlated moderately with self reported valence after the task.
+	
+	Under some conditions theme version had an effect on arousal.
+	Those participants, who performed well on the second test of creativity and received theme0 (basic theme) had on average a relative increase in arousal, while those getting theme1 rated themselves as more relaxed. The effect does not carry over to the rest of participants categories. 
+	
+	The findings from \textit{hypothesis 1} suggest that valence is influenced by the participant's performance on the task. Arousal can be influenced by the design of the user interfaces, but only under some conditions.
+	
+%	---
 	
 	
 	Sensor-based data is increasingly becoming a topic of research in the recent years. Sensors can provide highly useful information for e-learning support systems, which is real-time, uninterrupted and unbiased. Research on implementation and opportunities of this technology is discussed in \cite{Yun2016, Brovkov2017}. Automated collection of sensor data allows to make on-the-fly decisions for the user and open the door for "intervention user interfaces". Considerations on this type of interface systems are described in \cite{Schmidt2017}.
